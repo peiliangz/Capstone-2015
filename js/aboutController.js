@@ -8,8 +8,10 @@ function fetchToken() {
 	return partA + partB + partC + partD;
 }
 
-function aboutControl($scope) {
+function controlFunction($scope, $http) {
+	scope = $scope;
 	var token = 'token ' + fetchToken();
+	//$scope.test = "ccc";
 
 	$.ajax
 	({
@@ -21,10 +23,11 @@ function aboutControl($scope) {
 	    'Authorization': token
 	  },
 	  success: function (data){
-	    alert(data[0]["login"]);
+	    $scope.developers = data;
 	    data.forEach (function(element, index, array) {
 	    	
 	    });
+	    $scope.$apply();
 	  },
 	  failure: function (data) {
 	  	alert(JSON.stringify(data) );
@@ -32,5 +35,5 @@ function aboutControl($scope) {
 	});
 }
 
-app.controller('aboutControl', aboutControl);
+app.controller('aboutControl', controlFunction);
 
