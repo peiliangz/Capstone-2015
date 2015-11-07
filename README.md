@@ -6,7 +6,6 @@ A repository to manage an information website for HADataC\
 
 ```
 paperkit/
-
     css/
         ct-paper.css
         demo.css
@@ -19,20 +18,12 @@ paperkit/
         ct-paper.js
         jquery-1.10.2.js
         jquery-ui-1.10.4.custom.min.js
-
 index.html
-
 about.html
-
 install-guide.html
-
 feature-guide.html
-
 css/
-
     main.css
-
 js/
-
     main.js
 ```
