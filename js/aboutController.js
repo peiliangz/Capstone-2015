@@ -1,8 +1,16 @@
 var app = angular.module('aboutApp', []);
 
-//token:ba2fdac7c262d7b8b81f5065c5d96bd91e22801b
+function fetchToken() {
+	var partA = "cf960ab1";
+	var partB = "965569";
+	var partC = "551a91b9fb";
+	var partD = "90619c84ac250e7f";
+	return partA + partB + partC + partD;
+}
 
 function aboutControl($scope) {
+	var token = 'token ' + fetchToken();
+
 	$.ajax
 	({
 	  type: "GET",
@@ -10,13 +18,16 @@ function aboutControl($scope) {
 	  dataType: 'json',
 	  async: true,
 	  headers: {
-	    "Authorization": "token ba2fdac7c262d7b8b81f5065c5d96bd91e22801b"
+	    'Authorization': token
 	  },
 	  success: function (data){
 	    alert(data[0]["login"]);
 	    data.forEach (function(element, index, array) {
 	    	
 	    });
+	  },
+	  failure: function (data) {
+	  	alert(JSON.stringify(data) );
 	  }
 	});
 }
