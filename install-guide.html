@@ -84,7 +84,40 @@
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2">
                                 <h2>What is HADatAc?</h2>
-                                <h5>[some short info about hadatac]</h5>
+                                <!--<h5>[some short info about hadatac]</h5>-->
+                                <h5>
+                                  Mac OS X:
+
+Open `terminal`
+Install sbt
+  --brew install stb
+Install tar
+  --brew install tar
+Install wget
+  --brew install wget
+    5.   Install git
+  --brew install git
+    6.   Install Java SDK
+        -- check the java version
+    javac -version
+  -- run the following command
+    /usr/libexec/java_home -V
+  --check the version and run
+export JAVA_HOME=`/usr/libexec/java_home -v <<java1.8 version from above>>
+     7. Clone the HaDatac from the github
+git clone https://github.com/paulopinheiro1234/hadatac.git
+     8.  Install HaDatac
+./install_hadatac.sh
+     9.  Running the HaDatac
+go to your your hadatac installation directory) and type the following command:
+sbt
+run
+  10. Open the browser and type:
+ http://localhost:9000/hadatac/
+  11. Wait for a few seconds for the page to render.
+
+
+                                </h5>
                                 <br />
                                 <a href="./about.html" class="btn btn-danger btn-fill">Learn More</a>
                             </div>
@@ -139,7 +172,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="section section-dark text-center landing-section">
                     <div class="container">
                         <h2>Let's talk about us</h2>
@@ -166,7 +198,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="section landing-section">
                     <div class="container">
                         <div class="row">
@@ -193,8 +224,6 @@
                                 </form>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             -->
