@@ -12,7 +12,6 @@ function controlFunction($scope, $http) {
 	scope = $scope;
 	var token = 'token ' + fetchToken();
 	//$scope.test = "ccc";
-
 	$.ajax
 	({
 	  type: "GET",
@@ -23,6 +22,7 @@ function controlFunction($scope, $http) {
 	    'Authorization': token
 	  },
 	  success: function (data){
+	  	alert("ss");
 	    $scope.developers = data;
 	    data.forEach (function(element, index, array) {
 	    	
@@ -30,6 +30,7 @@ function controlFunction($scope, $http) {
 	    $scope.$apply();
 	  },
 	  failure: function (data) {
+	  	alert("failed");
 	  	alert(JSON.stringify(data) );
 	  }
 	});
