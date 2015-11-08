@@ -16,7 +16,7 @@ function controlFunction($scope, $http) {
 	$.ajax
 	({
 	  type: "GET",
-	  url: "https://api.github.com/repos/peiliangz/Capstone-2015/collaborators",
+	  url: "https://api.github.com/repos/paulopinheiro1234/hadatac/collaborators",
 	  dataType: 'json',
 	  async: true,
 	  headers: {

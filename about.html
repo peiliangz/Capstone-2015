@@ -141,7 +141,7 @@
                         </div>
                         
                         <div class = "row" >
-                            <div class="col-md-2 col-md-offset-1" ng-repeat="developer in developers">
+                            <div class={{$index == 0? "col-md-2 col-md-offset-1" : "col-md-2" }}  ng-repeat="developer in developers">
                                 <h4><a href="https://github.com/MrGraph">{{developer.login}}</a></h4>
                                 <img alt={{developer.login + " Picture"}} src={{developer.avatar_url}} class="img-circle img-no-padding img-responsive"/>
                             </div>
