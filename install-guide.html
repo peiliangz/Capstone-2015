@@ -84,7 +84,40 @@
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2">
                                 <h2>What is HADatAc?</h2>
-                                <h5>[some short info about hadatac]</h5>
+                                <!--<h5>[some short info about hadatac]</h5>-->
+                                <h5>
+                                  Mac OS X:
+
+Open `terminal`
+Install sbt
+  --brew install stb
+Install tar
+  --brew install tar
+Install wget
+  --brew install wget
+    5.   Install git
+  --brew install git
+    6.   Install Java SDK
+        -- check the java version
+    javac -version
+  -- run the following command
+    /usr/libexec/java_home -V
+  --check the version and run
+export JAVA_HOME=`/usr/libexec/java_home -v <<java1.8 version from above>>
+     7. Clone the HaDatac from the github
+git clone https://github.com/paulopinheiro1234/hadatac.git
+     8.  Install HaDatac
+./install_hadatac.sh
+     9.  Running the HaDatac
+go to your your hadatac installation directory) and type the following command:
+sbt
+run
+  10. Open the browser and type:
+ http://localhost:9000/hadatac/
+  11. Wait for a few seconds for the page to render.
+
+
+                                </h5>
                                 <br />
                                 <a href="./about.html" class="btn btn-danger btn-fill">Learn More</a>
                             </div>
@@ -117,8 +150,85 @@
                         </div>
                     </div>
                 </div>
-            </div> <!-- End main -->
-        </div> <!-- End Wrapper -->
+                <!--
+                <div class="section section-light-brown landing-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 column">
+                                <h4>First Attribute</h4>
+                                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                                <a class="btn btn-danger btn-simple" href="#">See more <i class="fa fa-chevron-right"></i></a>
+                            </div>
+                            <div class="col-md-4 column">
+                                <h4>Second Attribute</h4>
+                                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                                <a class="btn btn-danger btn-simple" href="#">See more <i class="fa fa-chevron-right"></i></a>
+                            </div>
+                            <div class="col-md-4 column">
+                                <h4>Third Attribute</h4>
+                                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                                <a class="btn btn-danger btn-simple" href="#">See more <i class="fa fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section section-dark text-center landing-section">
+                    <div class="container">
+                        <h2>Let's talk about us</h2>
+                        <div class="col-md-4">
+                            <div class="team-player">
+                                <img src="../assets/paper_img/chet_faker_2.jpg" alt="Thumbnail Image" class="img-circle img-responsive">
+                                <h5>Chet Faker <br /><small class="text-muted">Music</small></h5>
+                                <p>You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="team-player">
+                                <img src="../assets/paper_img/flume.jpg" alt="Thumbnail Image" class="img-circle img-responsive">
+                                <h5>Flume <br /><small class="text-muted">Production</small></h5>
+                                <p>You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="team-player">
+                                <img src="../assets/paper_img/banks.jpg" alt="Thumbnail Image" class="img-circle img-circle img-responsive">
+                                <h5>Banks <br /><small class="text-muted">Music</small></h5>
+                                <p>You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section landing-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <h2 class="text-center">Keep in touch?</h2>
+                                <form class="contact-form">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Name</label>
+                                            <input class="form-control" placeholder="Name">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Email</label>
+                                            <input class="form-control" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <label>Message</label>
+                                    <textarea class="form-control" rows="4" placeholder="Tell us your thoughts and feelings..."></textarea>
+                                    <div class="row">
+                                        <div class="col-md-4 col-md-offset-4">
+                                            <button class="btn btn-danger btn-block btn-lg btn-fill">Send Message</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            -->
+        </div> <!-- End main -->
+    </div> <!-- End wrapper -->
 
         <footer class="footer-demo section-dark">
             <div class="container">
