@@ -139,7 +139,33 @@ run
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2">
                                 <h2>Installing HADatAc on Linux</h2>
-                                <h5>[some short info about hadatac]</h5>
+                                <!--h5>[some short info about hadatac]</h5-->
+								  <h5>1.Open the git bash<br />
+									If you do not have git, you need to install:<a href="http://git-scm.com/downloads">git-bash</a><br /><br />
+									2.Execute command “sbt”<br />
+									If sbt is not installed, you need to install: <a href="http://www.scala-sbt.org/">sbt tool</a><br /><br />
+									3.Execute command “javac -version” <br />
+									If program fails, you need to install:<a href="http://java.com/en/download/">java</a><br /><br />
+									4.Execute command “wget”<br />
+									If wget is not installed, you need to install:<a href="http://gnuwin32.sourceforge.net/packages/wget.html">wget</a><br /><br />
+									5.Execute command “winrar”<br />
+									If WinRAR is not installed, install: <a href="http://www.win-rar.com/predownload.html?&L=0">WinRAR</a>
+									Then for 32 bit operating system, type set path="C:\Program Files\WinRAR\";%path%
+									Or for 64 bit operating system, type set path="C:\Program Files (x86)\WinRAR\";%path%<br /><br />
+									6.Go to target directory by executing “cd ~”<br /><br />
+									7.Execute command line to clone HADataC project<br /><br />
+									git clone https://github.com/paulopinheiro1234/hadatac.git<br /><br />
+									8.Go to HADataC directory by executing “cd ~/hadatac”<br /><br />
+									9.Execute command install_hadatac.bat to install HADataC<br /><br />
+									10.Go to browser and check if both <br />
+									http://localhost:8983/solr and http://localhost:7574/solr are running well
+									If not, execute command to re-install<
+									cd c:\hadatac\solr\
+									run_solr4.bat restart
+									run_solr5.bat restart<br /><br />
+									11.Execute command “sbt run” to start the project<br /><br />
+									12.HADatac should be running at “http://localhost:9000/hadatac/”
+									</h5>
                                 <br />
                             </div>
                         </div>
