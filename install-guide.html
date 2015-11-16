@@ -46,14 +46,6 @@
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-->
         </nav>
-        <!--
-        <div class="alert alert-danger landing-alert">
-             <div class="container text-center">
-                 <h5>Get a 10% discount on selected products until the 5th of November!</h5>
-            </div>
-        </div>
-        -->
-
         <div class="wrapper">
             <div class="landing-header section-gray">
                 <div class="container">
@@ -88,33 +80,33 @@
                                 <h5>
                                   Mac OS X:
 
-Open `terminal`
-Install sbt
-  --brew install stb
-Install tar
-  --brew install tar
-Install wget
-  --brew install wget
-    5.   Install git
-  --brew install git
-    6.   Install Java SDK
-        -- check the java version
-    javac -version
-  -- run the following command
-    /usr/libexec/java_home -V
-  --check the version and run
-export JAVA_HOME=`/usr/libexec/java_home -v << java1.8 version from above >>
-     7. Clone the HaDatac from the github
-git clone https://github.com/paulopinheiro1234/hadatac.git
-     8.  Install HaDatac
-./install_hadatac.sh
-     9.  Running the HaDatac
-go to your your hadatac installation directory) and type the following command:
-sbt
-run
-  10. Open the browser and type:
- http://localhost:9000/hadatac/
-  11. Wait for a few seconds for the page to render.
+                                    Open `terminal`
+                                    Install sbt
+                                      --brew install stb
+                                    Install tar
+                                      --brew install tar
+                                    Install wget
+                                      --brew install wget
+                                        5.   Install git
+                                      --brew install git
+                                        6.   Install Java SDK
+                                            -- check the java version
+                                        javac -version
+                                      -- run the following command
+                                        /usr/libexec/java_home -V
+                                      --check the version and run
+                                    export JAVA_HOME=`/usr/libexec/java_home -v << java1.8 version from above >>
+                                         7. Clone the HaDatac from the github
+                                    git clone https://github.com/paulopinheiro1234/hadatac.git
+                                         8.  Install HaDatac
+                                    ./install_hadatac.sh
+                                         9.  Running the HaDatac
+                                    go to your your hadatac installation directory) and type the following command:
+                                    sbt
+                                    run
+                                      10. Open the browser and type:
+                                     http://localhost:9000/hadatac/
+                                      11. Wait for a few seconds for the page to render.
 
 
                                 </h5>
@@ -123,38 +115,62 @@ run
                         </div>
                     </div>
                 </div>
-                <div id="windows" class="section text-center landing-section section-brown">
+                <div id="windows" class="section landing-section section-brown">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-8 col-md-offset-2">
+                            <div class="col-md-8 col-md-offset-2 text-center">
                                 <h2>Installing HADatAc on Windows</h2>
-								<h5>1.Open the git bash<br />
-									If you do not have git, you need to install:<a href="http://git-scm.com/downloads">git-bash</a><br /><br />
-									2.Execute command “sbt”<br />
-									If sbt is not installed, you need to install: <a href="http://www.scala-sbt.org/">sbt tool</a><br /><br />
-									3.Execute command “javac -version” <br />
-									If program fails, you need to install:<a href="http://java.com/en/download/">java</a><br /><br />
-									4.Execute command “wget”<br />
-									If wget is not installed, you need to install:<a href="http://gnuwin32.sourceforge.net/packages/wget.html">wget</a><br /><br />
-									5.Execute command “winrar”<br />
-									If WinRAR is not installed, install: <a href="http://www.win-rar.com/predownload.html?&L=0">WinRAR</a>
-									Then for 32 bit operating system, type set path="C:\Program Files\WinRAR\";%path%
-									Or for 64 bit operating system, type set path="C:\Program Files (x86)\WinRAR\";%path%<br /><br />
-									6.Go to target directory by executing “cd ~”<br /><br />
-									7.Execute command line to clone HADataC project<br /><br />
-									git clone https://github.com/paulopinheiro1234/hadatac.git<br /><br />
-									8.Go to HADataC directory by executing “cd ~/hadatac”<br /><br />
-									9.Execute command install_hadatac.bat to install HADataC<br /><br />
-									10.Go to browser and check if both <br />
-									http://localhost:8983/solr and http://localhost:7574/solr are running well
-									If not, execute command to re-install<
-									cd c:\hadatac\solr\
-									run_solr4.bat restart
-									run_solr5.bat restart<br /><br />
-									11.Execute command “sbt run” to start the project<br /><br />
-									12.HADatac should be running at “http://localhost:9000/hadatac/”
-									</h5>
+								<h5></h5>
                                 <br />
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        If you do not have git, you need to install: <a class="btn btn-simple btn-danger" href="http://git-scm.com/downloads">git-bash</a>
+                                    </div>
+                                    <code class="col-md-6">
+                                        Open the git bash
+                                    </code>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        If sbt is not installed, you need to install: <a class="btn btn-simple btn-danger" href="http://www.scala-sbt.org/">sbt tool</a>
+                                    </div>
+                                    <code class="col-md-6">
+                                        Execute command <kbd>sbt</kbd>
+                                    </code>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        If you need to, instal Java here: <a class="btn btn-simple btn-danger" href="http://java.com/en/download/">Java</a>
+                                    </div>
+                                    <code class="col-md-6">
+                                        To verify Java is installed, execute the following command <kbd>javac -version</kbd>
+                                    </code>
+                                </div>
+                                <li>Execute command <kbd>javac -version</kbd><li>
+                                <li>If program fails, you need to install:<a class="btn btn-simple btn-danger" href="http://java.com/en/download/">java</a></li>
+                                <li>Execute command <kbd>wget</kbd></li>
+                                <li>If wget is not installed, you need to install:<a class="btn btn-simple btn-danger" href="http://gnuwin32.sourceforge.net/packages/wget.html">wget</a></li>
+                                <li>Execute command <kbd>winrar</kbd></li>
+                                <li>If WinRAR is not installed, install: <a class="btn btn-simple btn-danger" href="http://www.win-rar.com/predownload.html?&L=0">WinRAR</a></li>
+                                <li>Then for 32 bit operating system, type <kbd>set path="C:\Program Files\WinRAR\";%path%</kbd></li>
+                                <li>Or for 64 bit operating system, type <kbd>set path="C:\Program Files (x86)\WinRAR\";%path%</kbd></li>
+                                <li>Go to target directory by executing <kbd>cd ~</kbd></li>
+                                <li>Execute command line to clone HADataC project</li>
+                                <li><kbd>git clone https://github.com/paulopinheiro1234/hadatac.git</kbd></li>
+                                <li>Go to HADataC directory by executing <kbd>cd ~/hadatac</kbd></li>
+                                <li>Execute command install_hadatac.bat to install HADataC</li>
+                                <li>Go to browser and check if both</li>
+                                <li><kbd>http://localhost:8983/solr</kbd> and <kbd>http://localhost:7574/solr</kbd> are running well</li>
+                                <li>If not, execute command to re-install</li>
+                                <li><kbd>cd c:\hadatac\solr\</kbd></li>
+                                <li><kbd>run_solr4.bat restart</kbd></li>
+                                <li><kbd>run_solr5.bat restart</kbd></li>
+                                <li>Execute command <kbd>sbt run</kbd> to start the project</li>
+                                <li>HADatac should be running at <kbd>http://localhost:9000/hadatac/</kbd></li>
                             </div>
                         </div>
                     </div>
