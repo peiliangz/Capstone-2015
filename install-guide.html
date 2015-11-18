@@ -115,7 +115,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="windows" class="section landing-section section-brown">
+                <div id="windows" class="section landing-section section-easter">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2 text-center">
@@ -126,41 +126,100 @@
                         </div>
                         <div>
                             <div>
+                                <h3>Installing the required software</h3>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        If you do not have git, you need to install: <a class="btn btn-simple btn-danger" href="http://git-scm.com/downloads">git-bash</a>
+                                        <p>If <mark>git</mark> is not installed, you can install git here: <a class="link" href="http://git-scm.com/downloads">git-bash</a></p>
                                     </div>
-                                    <code class="col-md-6">
+
+                                    <!-- <code class="col-md-6">
                                         Open the git bash
                                     </code>
+                                     -->
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        If sbt is not installed, you need to install: <a class="btn btn-simple btn-danger" href="http://www.scala-sbt.org/">sbt tool</a>
+                                        <p>If <mark>sbt</mark> is not installed, you can install sbt here: <a class="link" href="http://www.scala-sbt.org/">sbt tool</a></p>
                                     </div>
-                                    <code class="col-md-6">
+
+                                    <!-- <code class="col-md-6">
                                         Execute command <kbd>sbt</kbd>
                                     </code>
+                                     -->
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        If you need to, instal Java here: <a class="btn btn-simple btn-danger" href="http://java.com/en/download/">Java</a>
+                                        <p>If at least <mark>Java SDK 1.8+</mark> is not installed, you can install Java here: <a class="link" href="http://java.com/en/download/">Java</a></p>
                                     </div>
                                     <code class="col-md-6">
-                                        To verify Java is installed, execute the following command <kbd>javac -version</kbd> the bash window should print <kbd>javac 1.8.0_25</kbd>
+                                        <p>To verify, execute the following command <kbd>javac -version</kbd> the output should be at least java 1.8+ (e.g. <kbd>javac 1.8.0_25</kbd>)</p>
                                     </code>
                                 </div>
-                                <li>Execute command <kbd>wget</kbd></li>
-                                <li>If wget is not installed, you need to install:<a class="btn btn-simple btn-danger" href="http://gnuwin32.sourceforge.net/packages/wget.html">wget</a></li>
-                                <li>Execute command <kbd>winrar</kbd></li>
-                                <li>If WinRAR is not installed, install: <a class="btn btn-simple btn-danger" href="http://www.win-rar.com/predownload.html?&L=0">WinRAR</a></li>
-                                <li>Then for 32 bit operating system, type <kbd>set path="C:\Program Files\WinRAR\";%path%</kbd></li>
-                                <li>Or for 64 bit operating system, type <kbd>set path="C:\Program Files (x86)\WinRAR\";%path%</kbd></li>
-                                <li>Go to target directory by executing <kbd>cd ~</kbd></li>
-                                <li>Execute command line to clone HADataC project</li>
-                                <li><kbd>git clone https://github.com/paulopinheiro1234/hadatac.git</kbd></li>
-                                <li>Go to HADataC directory by executing <kbd>cd ~/hadatac</kbd></li>
-                                <li>Execute command install_hadatac.bat to install HADataC</li>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p>If <mark>wget</mark> is not installed, you can install wget here: <a class="link" href="http://gnuwin32.sourceforge.net/packages/wget.html">wget</a></p>
+                                    </div>
+
+                                    <!-- <code class="col-md-6">
+                                        Execute the command <kbd>wget
+                                    </code>
+                                     -->
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p>If <mark>WinRAR</mark> is not installed, you can install WinRAR here: <a class="link" href="http://www.win-rar.com/predownload.html?&L=0">WinRAR</a></p>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p>For a <mark>32 bit OS</mark>:</p>
+                                    </div>
+                                    <code class="col-md-6">
+                                        <p>Type <kbd>set path="C:\Program Files\WinRAR\";%path%</kbd></p>
+                                    </code>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p> For a <mark>64 bit OS</mark>:</p>
+                                    </div>
+                                    <code class="col-md-6">
+                                        <p>Type <kbd>set path="C:\Program Giles (x86)\WinRAR\";%path%</kbd></p>
+                                    </code>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p>Navigate to the target directory:</p>
+                                    </div>
+                                    <code class="col-md-6">
+                                        <p>Execute <kbd>cd ~</kbd></p>
+                                    </code>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p>Install the HADatAc project via the command line:</p>
+                                    </div>
+                                    <code class="col-md-6">
+                                        <p>Execute <kbd>git clone https://github.com/paulopinheiro1234/hadatac.git</kbd></p>
+                                    </code>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p>Go to the HADatAc directory:</p>
+                                    </div>
+                                    <code class="col-md-6">
+                                        <p>Execute <kbd>cd ~/hadatac</kbd></p>
+                                    </code>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p> Go to your browser and check:</p>
+                                    </div>
+                                    <code class="col-md-6">
+                                        <p>Go to <kbd>http://localhost:8983/solr</kbd> and <kbd>http://localhost:7574/solr</kbd></p>
+                                    </code>
+                                </div>
+
                                 <li>Go to browser and check if both</li>
                                 <li><kbd>http://localhost:8983/solr</kbd> and <kbd>http://localhost:7574/solr</kbd> are running well</li>
                                 <li>If not, execute command to re-install</li>
