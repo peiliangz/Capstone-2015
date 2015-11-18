@@ -126,7 +126,7 @@
                         </div>
                         <div>
                             <div>
-                                <h3>Installing the required software</h3>
+                                <h3>Installing the required software:</h3>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <p>If <mark>git</mark> is not installed, you can install git here: <a class="link" href="http://git-scm.com/downloads">git-bash</a></p>
@@ -171,6 +171,7 @@
                                     </div>
 
                                 </div>
+                                <h3>Installing HADatAc:</h3>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <p>For a <mark>32 bit OS</mark>:</p>
@@ -219,15 +220,38 @@
                                         <p>Go to <kbd>http://localhost:8983/solr</kbd> and <kbd>http://localhost:7574/solr</kbd></p>
                                     </code>
                                 </div>
-
-                                <li>Go to browser and check if both</li>
-                                <li><kbd>http://localhost:8983/solr</kbd> and <kbd>http://localhost:7574/solr</kbd> are running well</li>
-                                <li>If not, execute command to re-install</li>
-                                <li><kbd>cd c:\hadatac\solr\</kbd></li>
-                                <li><kbd>run_solr4.bat restart</kbd></li>
-                                <li><kbd>run_solr5.bat restart</kbd></li>
-                                <li>Execute command <kbd>sbt run</kbd> to start the project</li>
-                                <li>HADatac should be running at <kbd>http://localhost:9000/hadatac/</kbd></li>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p><mark>If nothing is there</mark> do the following to re-install:</p>
+                                    </div>
+                                    <code class="col-md-6">
+                                        <p>Execute<kbd>cd C:\hadatac\solr\</kbd> <kbd>run_solr4.bat restart</kbd> then <kbd>run_solr5.bat restart</kbd></p>
+                                    </code>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p>To start HADatAc:</p>
+                                    </div>
+                                    <code class="col-md-6">
+                                        <p>Execute <kbd>sbt run</kbd></p>
+                                    </code>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p>HADatAc should be running now: </p>
+                                    </div>
+                                    <code class="col-md-6">
+                                        <p>Check <kbd>http://localhost:9000/hadatac/</kbd></p>
+                                    </code>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p><mark>If nothing is there</mark>, please report an issue here:</p>
+                                    </div>
+                                    <code class="col-md-6">
+                                        <p><a class="link" href="https://github.com/paulopinheiro1234/hadatac">HADatAc Repository</a></p>
+                                    </code>
+                                </div>
                             </div>
                         </div>
                     </div>
