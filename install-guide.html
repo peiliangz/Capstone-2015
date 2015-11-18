@@ -76,8 +76,10 @@
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2">
                                 <h2>Readers Guide</h2>
-                                <p>A note for reading this guide, any text presented like <kbd>this</kbd>
-                                    is a console/terminal command to be executed on the proper terminal.
+                                <p>A note for reading this guide, any text presented like <span class="text-lg"><kbd>this</kbd></span>
+                                    is a console/terminal command for you to execute.
+                                    Any text presented like <span class="text-lg"><kbd class="out">this</kbd></span> is an example output
+                                    from the terminal or console.
                                     If you run into any issues don't hesitate to report issues at the
                                     <a class="link" href="https://github.com/paulopinheiro1234/hadatac">HADatAc Repository</a>
                                 </p>
@@ -128,6 +130,44 @@
                                     </div>
                                     <code class="col-md-6">
                                         <p>Execute <kbd>brew install tar</kbd></p>
+                                    </code>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p>If <mark>wget</mark> is not installed, you can install wget via:</p>
+                                    </div>
+                                    <code class="col-md-6">
+                                        <p>Execute <kbd>brew install wget</kbd></p>
+                                    </code>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p>If <mark>git</mark> is not installed, you can install git via:</p>
+                                    </div>
+                                    <code class="col-md-6">
+                                        <p>Execute <kbd>brew install git</kbd></p>
+                                    </code>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p>If at least <mark>Java SDK 1.8+</mark> is not installed, you can install Java here:
+                                            <a class="link" href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Java</a>
+                                        </p>
+                                    </div>
+                                    <code class="col-md-6">
+                                        <p>Check that your version of java is correct, execute <kbd>javac -version</kbd>
+                                            (should be similar to <kbd class="out">javac 1.8.0_25</kbd>)</p>
+                                    </code>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p>If your version is not at least <mark>1.8+</mark>:</p>
+                                    </div>
+                                    <code class="col-md-6">
+                                        <p>Execute <kbd>/usr/libexec/java_home -V</kbd> then <kbd> export
+                                            JAVA_HOME=`/usr/libexec/java_home -v << java1.8 version from above >>`</kbd>
+                                             (Note: replace the text within << >> with your current java version output from <kbd>javac -version</kbd>)
+                                        </p>
                                     </code>
                                 </div>
 
@@ -204,7 +244,7 @@
                                         <p>If at least <mark>Java SDK 1.8+</mark> is not installed, you can install Java here: <a class="link" href="http://java.com/en/download/">Java</a></p>
                                     </div>
                                     <code class="col-md-6">
-                                        <p>To verify, execute the following command <kbd>javac -version</kbd> the output should be at least java 1.8+ (e.g. <kbd>javac 1.8.0_25</kbd>)</p>
+                                        <p>To verify, execute the following command <kbd>javac -version</kbd> the output should be at least java 1.8+ (e.g. <kbd class="out">javac 1.8.0_25</kbd>)</p>
                                     </code>
                                 </div>
                                 <div class="row">
