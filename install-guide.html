@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="installPage" >
     <head>
     	<meta charset="utf-8" />
     	<link rel="icon" type="image/png" href="./paperkit/assets/paper_img/favicon.ico">
@@ -22,7 +22,7 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 
     </head>
-    <body>
+    <body ng-controller="installCtrl">
         <nav class="navbar navbar-default" role="navigation-demo" id="demo-navbar">
           <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -56,21 +56,429 @@
                         <div class="row text-center">
                             <div class="col-md-4 column">
                                 <h4>Mac OS X</h4>
-                                <a class="btn btn-fill btn-info" href="#mac">Mac OS X Steps</a>
+                                <a class="btn btn-fill btn-info" ng-click="selectOS(1)" href="#mac-install" data-toggle="collapse" data-parent="#install-panel" aria-expanded="true" aria-controls="mac-install">Mac OS X Steps</a>
                             </div>
                             <div class="col-md-4 column">
                                 <h4>Windows</h4>
-                                <a href="#windows" class="btn btn-fill btn-info">Windows Steps</a>
+                                <a class="btn btn-fill btn-info" ng-click="selectOS(2)" id="windows-select" href="#windows-install" data-toggle="collapse" data-parent="#install-panel" aria-expanded="false" aria-controls="windows-install">Windows Steps</a>
                             </div>
                             <div class="col-md-4 column">
                                 <h4>Linux</h4>
-                                <a href="#linux" class="btn btn-fill btn-info">Linux Steps</a>
+                                <a class="btn btn-fill btn-info" ng-click="selectOS(3)" id="linux-select" href="#linux-install" data-toggle="collapse" data-parent="#install-panel" aria-expanded="false" aria-controls="linux-install">Linux Steps</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="main">
+
+                <div id="install-panel">
+                    <div class="panel">
+                        <div id="mac-install" class="collapse">
+                            <div id="mac" class="section landing-section section-easter">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-8 col-md-offset-2 text-center">
+                                            <h2>Installing HADatAc on Mac</h2>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <h3>Installing the required software:</h3>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>Open the <mark>Terminal</mark></p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Hold down Command and tap the Space key, type <kbd>Terminal</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>If <mark>homebrew</mark> is not installed, you can install
+                                                        homebrew here: <a class="link" href="http://brew.sh/">homebrew</a></p>
+                                                </div>
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>If <mark>sbt</mark> is not installed, you can install sbt via:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Execute <kbd>brew install sbt</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>If <mark>tar</mark> is not installed, you can install tar via:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Execute <kbd>brew install tar</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>If <mark>wget</mark> is not installed, you can install wget via:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Execute <kbd>brew install wget</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>If <mark>git</mark> is not installed, you can install git via:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Execute <kbd>brew install git</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>If at least <mark>Java SDK 1.8+</mark> is not installed, you can install Java here:
+                                                        <a class="link" href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Java</a>
+                                                    </p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Check that your version of java is correct, execute <kbd>javac -version</kbd>
+                                                        (should be similar to <kbd class="out">javac 1.8.0_25</kbd>)</p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>If your version is not at least <mark>1.8+</mark>:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Execute <kbd>/usr/libexec/java_home -V</kbd> then <kbd> export
+                                                        JAVA_HOME=`/usr/libexec/java_home -v << java1.8 version from above >>`</kbd>
+                                                         (Note: replace the text within << >> with your current java version output from <kbd>javac -version</kbd>)
+                                                    </p>
+                                                </code>
+                                            </div>
+                                            <h3>Installing HADatAc:</h3>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>Download the HADatAc project via:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Execute <kbd>git clone https://github.com/paulopinheiro1234/hadatac.git</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>To install HADatAc:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Execute <kbd>./install_hadatac.sh</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>Go to the HADatAc directory:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Execute <kbd>cd ~/hadatac</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>To run HADatAc:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Execute <kbd>sbt run</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>HADatAc should be running now: </p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Check <kbd>http://localhost:9000/hadatac/</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p><mark>If nothing is there</mark>, please report an issue here:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p><a class="link" href="https://github.com/paulopinheiro1234/hadatac">HADatAc Repository</a></p>
+                                                </code>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section landing-section ">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <h4 class="text-success">Follow through to learn how to use HADatAc: </h4>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <a class="btn btn-lg btn-fill btn-success above" href="./feature-guide.html">&#10140;</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+
+
+                    </div>
+
+                    <div class = "panel">
+                        <div id="windows-install" class="collapse">
+                            <div id="windows" class="section landing-section section-easter">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-8 col-md-offset-2 text-center">
+                                            <h2>Installing HADatAc on Windows</h2>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <h3>Installing the required software:</h3>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>If <mark>git</mark> is not installed, you can install git here: <a class="link" href="http://git-scm.com/downloads">git-bash</a></p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>If <mark>sbt</mark> is not installed, you can install sbt here: <a class="link" href="http://www.scala-sbt.org/">sbt tool</a></p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>If at least <mark>Java SDK 1.8+</mark> is not installed, you can install Java here: <a class="link" href="http://java.com/en/download/">Java</a></p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>To verify, execute the following command <kbd>javac -version</kbd> the output should be at least java 1.8+ (e.g. <kbd class="out">javac 1.8.0_25</kbd>)</p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>If <mark>wget</mark> is not installed, you can install wget here: <a class="link" href="http://gnuwin32.sourceforge.net/packages/wget.html">wget</a></p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>If <mark>WinRAR</mark> is not installed, you can install WinRAR here: <a class="link" href="http://www.win-rar.com/predownload.html?&L=0">WinRAR</a></p>
+                                                </div>
+                                            </div>
+                                            <h3>Installing HADatAc:</h3>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>For a <mark>32 bit OS</mark>:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Type <kbd>set path="C:\Program Files\WinRAR\";%path%</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p> For a <mark>64 bit OS</mark>:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Type <kbd>set path="C:\Program Giles (x86)\WinRAR\";%path%</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>Navigate to the target directory:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Execute <kbd>cd ~</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>Download the HADatAc project via the command line:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Execute <kbd>git clone https://github.com/paulopinheiro1234/hadatac.git</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>Go to the HADatAc directory:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Execute <kbd>cd ~/hadatac</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p> Go to your browser and check:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Go to <kbd>http://localhost:8983/solr</kbd> and <kbd>http://localhost:7574/solr</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p><mark>If nothing is there</mark> do the following to re-install:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Execute<kbd>cd C:\hadatac\solr\</kbd>, then <kbd>run_solr4.bat restart</kbd> and <kbd>run_solr5.bat restart</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>To start HADatAc:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Execute <kbd>sbt run</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>HADatAc should be running now: </p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Check <kbd>http://localhost:9000/hadatac/</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p><mark>If nothing is there</mark>, please report an issue here:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p><a class="link" href="https://github.com/paulopinheiro1234/hadatac">HADatAc Repository</a></p>
+                                                </code>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section landing-section ">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <h4 class="text-success">Follow through to learn how to use HADatAc: </h4>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <a class="btn btn-lg btn-fill btn-success above" href="./feature-guide.html">&#10140;</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "panel">
+                        <div id="linux-install" class="collapse">
+                            <div id="linux" class="section landing-section section-easter">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-8 col-md-offset-2 text-center">
+                                            <h2>Installing HADatAc on Linux</h2>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <!-- Linux stuff here -->
+                                            <h3>Installing the required software:</h3>
+                                            <!-- git & sbt -->
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>If <mark>git</mark> is not installed, you can install git here: <a class="link" href="http://git-scm.com/downloads">git-bash</a></p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>If <mark>sbt</mark> is not installed, you can install sbt here: <a class="link" href="http://www.scala-sbt.org/">sbt tool</a></p>
+                                                </div>
+                                            </div>
+                                            <!-- java and wget -->
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>If at least <mark>Java SDK 1.8+</mark> is not installed, you can install Java here: <a class="link" href="http://java.com/en/download/">Java</a></p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>To verify, execute the following command <kbd>javac -version</kbd> the output should be at least java 1.8+ (e.g. <kbd class="out">javac 1.8.0_25</kbd>)</p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>If <mark>wget</mark> is not installed, you can install wget here: <a class="link" href="http://gnuwin32.sourceforge.net/packages/wget.html">wget</a></p>
+                                                </div>
+                                            </div>
+                                            <h3>Installing HADatAc:</h3>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>Download the HADatAc project via:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Execute <kbd>git clone https://github.com/paulopinheiro1234/hadatac.git</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>To install HADatAc:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Execute <kbd>./install_hadatac.sh</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p> Go to your browser and check:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Go to <kbd>http://localhost:8983/solr</kbd> and <kbd>http://localhost:7574/solr</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p><mark>If nothing is there</mark> do the following to re-install:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Execute<kbd>cd C:\hadatac\solr\</kbd>, then <kbd>run_solr4.bat restart</kbd> and <kbd>run_solr5.bat restart</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>To start HADatAc:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Execute <kbd>sbt run</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>HADatAc should be running now: </p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p>Check <kbd>http://localhost:9000/hadatac/</kbd></p>
+                                                </code>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p><mark>If nothing is there</mark>, please report an issue here:</p>
+                                                </div>
+                                                <code class="col-md-6">
+                                                    <p><a class="link" href="https://github.com/paulopinheiro1234/hadatac">HADatAc Repository</a></p>
+                                                </code>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section landing-section ">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <h4 class="text-success">Follow through to learn how to use HADatAc: </h4>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <a class="btn btn-lg btn-fill btn-success above" href="./feature-guide.html">&#10140;</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="section landing-section section-nude">
                     <div class="container">
                         <div class="row">
@@ -87,398 +495,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="mac" class="section landing-section section-easter">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-2 text-center">
-                                <h2>Installing HADatAc on Mac</h2>
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <h3>Installing the required software:</h3>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>Open the <mark>Terminal</mark></p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Hold down Command and tap the Space key, type <kbd>Terminal</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>If <mark>homebrew</mark> is not installed, you can install
-                                            homebrew here: <a class="link" href="http://brew.sh/">homebrew</a></p>
-                                    </div>
-<!--
-                                    <code class="col-md-6">
-                                        <p><kbd>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</kbd></p>
-                                    </code> -->
-
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>If <mark>sbt</mark> is not installed, you can install sbt via:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Execute <kbd>brew install sbt</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>If <mark>tar</mark> is not installed, you can install tar via:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Execute <kbd>brew install tar</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>If <mark>wget</mark> is not installed, you can install wget via:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Execute <kbd>brew install wget</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>If <mark>git</mark> is not installed, you can install git via:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Execute <kbd>brew install git</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>If at least <mark>Java SDK 1.8+</mark> is not installed, you can install Java here:
-                                            <a class="link" href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Java</a>
-                                        </p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Check that your version of java is correct, execute <kbd>javac -version</kbd>
-                                            (should be similar to <kbd class="out">javac 1.8.0_25</kbd>)</p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>If your version is not at least <mark>1.8+</mark>:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Execute <kbd>/usr/libexec/java_home -V</kbd> then <kbd> export
-                                            JAVA_HOME=`/usr/libexec/java_home -v << java1.8 version from above >>`</kbd>
-                                             (Note: replace the text within << >> with your current java version output from <kbd>javac -version</kbd>)
-                                        </p>
-                                    </code>
-                                </div>
-                                <h3>Installing HADatAc:</h3>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>Download the HADatAc project via:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Execute <kbd>git clone https://github.com/paulopinheiro1234/hadatac.git</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>To install HADatAc:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Execute <kbd>./install_hadatac.sh</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>Go to the HADatAc directory:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Execute <kbd>cd ~/hadatac</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>To run HADatAc:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Execute <kbd>sbt run</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>HADatAc should be running now: </p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Check <kbd>http://localhost:9000/hadatac/</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p><mark>If nothing is there</mark>, please report an issue here:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p><a class="link" href="https://github.com/paulopinheiro1234/hadatac">HADatAc Repository</a></p>
-                                    </code>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="section landing-section ">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <h4 class="text-success">Follow through to learn how to use HADatAc: </h4>
-                            </div>
-                            <div class="col-md-3">
-                                <a class="btn btn-lg btn-fill btn-success above" href="./feature-guide.html">&#10140;</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="windows" class="section landing-section section-easter">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-2 text-center">
-                                <h2>Installing HADatAc on Windows</h2>
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <h3>Installing the required software:</h3>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>If <mark>git</mark> is not installed, you can install git here: <a class="link" href="http://git-scm.com/downloads">git-bash</a></p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>If <mark>sbt</mark> is not installed, you can install sbt here: <a class="link" href="http://www.scala-sbt.org/">sbt tool</a></p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>If at least <mark>Java SDK 1.8+</mark> is not installed, you can install Java here: <a class="link" href="http://java.com/en/download/">Java</a></p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>To verify, execute the following command <kbd>javac -version</kbd> the output should be at least java 1.8+ (e.g. <kbd class="out">javac 1.8.0_25</kbd>)</p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>If <mark>wget</mark> is not installed, you can install wget here: <a class="link" href="http://gnuwin32.sourceforge.net/packages/wget.html">wget</a></p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>If <mark>WinRAR</mark> is not installed, you can install WinRAR here: <a class="link" href="http://www.win-rar.com/predownload.html?&L=0">WinRAR</a></p>
-                                    </div>
-                                </div>
-                                <h3>Installing HADatAc:</h3>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>For a <mark>32 bit OS</mark>:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Type <kbd>set path="C:\Program Files\WinRAR\";%path%</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p> For a <mark>64 bit OS</mark>:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Type <kbd>set path="C:\Program Giles (x86)\WinRAR\";%path%</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>Navigate to the target directory:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Execute <kbd>cd ~</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>Download the HADatAc project via the command line:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Execute <kbd>git clone https://github.com/paulopinheiro1234/hadatac.git</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>Go to the HADatAc directory:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Execute <kbd>cd ~/hadatac</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p> Go to your browser and check:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Go to <kbd>http://localhost:8983/solr</kbd> and <kbd>http://localhost:7574/solr</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p><mark>If nothing is there</mark> do the following to re-install:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Execute<kbd>cd C:\hadatac\solr\</kbd>, then <kbd>run_solr4.bat restart</kbd> and <kbd>run_solr5.bat restart</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>To start HADatAc:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Execute <kbd>sbt run</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>HADatAc should be running now: </p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Check <kbd>http://localhost:9000/hadatac/</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p><mark>If nothing is there</mark>, please report an issue here:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p><a class="link" href="https://github.com/paulopinheiro1234/hadatac">HADatAc Repository</a></p>
-                                    </code>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="section landing-section ">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <h4 class="text-success">Follow through to learn how to use HADatAc: </h4>
-                            </div>
-                            <div class="col-md-3">
-                                <a class="btn btn-lg btn-fill btn-success above" href="./feature-guide.html">&#10140;</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="linux" class="section landing-section section-easter">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-2 text-center">
-                                <h2>Installing HADatAc on Linux</h2>
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <!-- Linux stuff here -->
-                                <h3>Installing the required software:</h3>
-                                <!-- git & sbt -->
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>If <mark>git</mark> is not installed, you can install git here: <a class="link" href="http://git-scm.com/downloads">git-bash</a></p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>If <mark>sbt</mark> is not installed, you can install sbt here: <a class="link" href="http://www.scala-sbt.org/">sbt tool</a></p>
-                                    </div>
-                                </div>
-                                <!-- java and wget -->
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>If at least <mark>Java SDK 1.8+</mark> is not installed, you can install Java here: <a class="link" href="http://java.com/en/download/">Java</a></p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>To verify, execute the following command <kbd>javac -version</kbd> the output should be at least java 1.8+ (e.g. <kbd class="out">javac 1.8.0_25</kbd>)</p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>If <mark>wget</mark> is not installed, you can install wget here: <a class="link" href="http://gnuwin32.sourceforge.net/packages/wget.html">wget</a></p>
-                                    </div>
-                                </div>
-                                <h3>Installing HADatAc:</h3>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>Download the HADatAc project via:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Execute <kbd>git clone https://github.com/paulopinheiro1234/hadatac.git</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>To install HADatAc:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Execute <kbd>./install_hadatac.sh</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p> Go to your browser and check:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Go to <kbd>http://localhost:8983/solr</kbd> and <kbd>http://localhost:7574/solr</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p><mark>If nothing is there</mark> do the following to re-install:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Execute<kbd>cd C:\hadatac\solr\</kbd>, then <kbd>run_solr4.bat restart</kbd> and <kbd>run_solr5.bat restart</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>To start HADatAc:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Execute <kbd>sbt run</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>HADatAc should be running now: </p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p>Check <kbd>http://localhost:9000/hadatac/</kbd></p>
-                                    </code>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p><mark>If nothing is there</mark>, please report an issue here:</p>
-                                    </div>
-                                    <code class="col-md-6">
-                                        <p><a class="link" href="https://github.com/paulopinheiro1234/hadatac">HADatAc Repository</a></p>
-                                    </code>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="section landing-section ">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <h4 class="text-success">Follow through to learn how to use HADatAc: </h4>
-                            </div>
-                            <div class="col-md-3">
-                                <a class="btn btn-lg btn-fill btn-success above" href="./feature-guide.html">&#10140;</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div> <!-- End main -->
         </div> <!-- End wrapper -->
 
@@ -510,7 +527,11 @@
         <script src="./paperkit/assets/js/ct-paper-radio.js"></script>
         <script src="./paperkit/assets/js/bootstrap-select.js"></script>
         <script src="./paperkit/assets/js/bootstrap-datepicker.js"></script>
-        <script src="./node_modules/angular/angular.min.js"></script>
         <script src="./paperkit/assets/js/ct-paper.js"></script>
+
+
+        <script src="./node_modules/angular/angular.min.js"></script>
+            <script src="./js/angular-ui-bundle.js"></script>-
+        <script src="./js/installController.js"></script>
     </body>
 </html>
