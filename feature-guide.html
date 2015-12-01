@@ -342,7 +342,53 @@
                                     <li>Name (Again, not necessarily unique)</li>
                                     <li>Serial number (Must be unique)</li>
                                 </ul>
-                                
+                                <h6>Detector Models</h6>
+                                <p>Verify there is one entry per Detector Model:</p>
+                                <ul>
+                                    <li>Name</li>
+                                    <li>Maker</li>
+                                    <li>Description</li>
+                                </ul>
+                                <p>In addition, each Detector Model should have at least one Sensing Perspective.
+                                    A Sensing Perspective should have the following properties, however it is possible
+                                    that not all are known for every Sensing Perspective:
+                                </p>
+                                <ul>
+                                    <li>EntityCharacteristic name (Necessary)</li>
+                                    <li>Accuracy %</li>
+                                    <li>Accuracy R2</li>
+                                    <li>Output resolution</li>
+                                    <li>Max response time (+ units)</li>
+                                    <li>Min and max range of values</li>
+                                </ul>
+                                <h6>Detector List</h6>
+                                <p>As with other lists of individuals, verify that there is one entry for each Detector with the following information:</p>
+                                <ul>
+                                    <li>Name (Might not be unique)</li>
+                                    <li>Serial number (Must be unique)</li>
+                                </ul>
+                                <h5><u>Lists - Measurements</u></h5>
+                                <h6>Entities</h6>
+                                <p>Review list of Entities to be sure that everything your project plans to observe for data measurements is included.
+                                    Note that context is very important in differentiating Entities - for example, measuring water in a lake is different
+                                    from measuring a sample of water brought back to the lab.</p>
+                                <h6>Characteristics</h6>
+                                <h6>EntityCharacteristics</h6>
+                                <p>A unique pairs of an Entity and a Characteristic, for describing Sensing Perspectives.
+                                    There will not be an EntityCharacteristic for <i>every</i> pairing of Entity and Characteristic, only those represented in the Sensing Perspectives.</p>
+                                <ul>
+                                    <li>Entity (Exactly one per entry)</li>
+                                    <li>Characteristic (Exactly one per entry)</li>
+                                </ul>
+                                <h6>Standards</h6>
+                                <h6>Agents</h6>
+                                <p>There are two different types of thing represented as "Agents" - People and Organizations. This graph should be connected, with the placeholder
+                                    Agent node at the root. Edges in this graph represent a part-of/has-part relationship.</p>
+                                <ul>
+                                    <li>Name (For both People and Organizations)</li>
+                                    <li>Email (Where applicable)</li>
+                                    <li>Website (Where applicable)</li>
+                                    <li>Some parent node in the graph - an Organization may be a part of another organization, or, if it stands alone, then its parent is the Agent placeholder at the center. Similarly, a person may belong to one or more Organizations, or, if completely unaffiliated, will connect only to the Agent placeholder.</li>
                             </div>
                         </div>
                     </div>
