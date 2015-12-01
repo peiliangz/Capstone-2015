@@ -92,8 +92,44 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2">
-                                <h4 class="center-text">Data Management</h4>
-
+                                <h3>Data Management</h3>
+                                <h4>On the HADatAc use of URIs</h4>
+                                <h5>Static metadata URIs</h5>
+                                <h6><u>For Classes</u></h6>
+                                <p>
+                                    Static metadata classes are intended to be reused across multiple projects, and shared through HADataC.org.
+                                     It is possible for one project to have its own set of classes without sharing the classes outside the project.
+                                      If that is the case, it is up to the project to define its own policy on how to assign URIs to classes of
+                                      static metadata.
+                                 </p>
+                                 <p>
+                                     If the project shares classes, we recommend the project to consider the use of the <a href="http://hadatac.org">hadatac.org</a>
+                                      as the base for shared resources. <mark>To request a hadatac.org uri, please contact the email list</mark>
+                                </p>
+                                <h6><u>For Instances</u></h6>
+                                <p>
+                                    Static metadata instances are intended to be privately shared within projects. For instance, the serial number
+                                     of instruments are not something that is of interest to other projects. Every HADatAc installation has a host
+                                      URI, e.g., <a href="http://example.org">http://example.org</a>. The URI of a HADataC installation is typically
+                                       the host URI followed with /hadatac/ (trailing slash is needed),
+                                       e.g., <a href="http://example.org/hadatac/">http://example.org/hadatac/</a>.
+                                </p>
+                                <p>
+                                    URIs of instances are often stored in a folder within the host machine, which is associated with a given
+                                    URL in case the project decides to share their instances. For instance, we can create a folder meta
+                                     (<a href="http://example.org/meta/">http://example.org/meta/</a>).
+                                </p>
+                                <h5>Dynamic metadata URIs</h5>
+                                <p>
+                                    URI generators is a piece of software responsible for generating dynamic metadata such as deployments, data collections and datasets.
+                                    They are called URI generators because they are also responsible for generating and assigning URIs for dynamic metadata as they are created.
+                                </p>
+                                <p>
+                                    Every HADatac installation has one console, which includes a Deployment Management module. The console's Deployment Management is a URI generator.
+                                    MOCCASN, the Android application used for capturing contextual knowledge about human interventions is another URI generator.
+                                    The console's Deployment Management module is already pre-registered with HADataC, and its URI generator ID is '00000001'.
+                                    All other URI generators need to be registered with a HADataC installation, which will assign a new ID for each registered URI generator.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -102,14 +138,211 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2">
-                                <h4 class="center-text">Metadata Browser</h4>
-
+                                <h3 class="center-text">Metadata Browser</h3>
+                                <p>
+                                    The Metadata Browser allows you to examine the parts of your data collection that give it context, including the entities observed,
+                                     the characteristics being measured, and the sensors taking the measurements.
+                                     Metadata is kept as linked data in order to preserve the relationships between it and the data, and leverages ontologies already
+                                     in use by other scentific communities to aid interoperability. Ontologies also provide a hierarchical structure of concepts, which
+                                      can help lend insight into the organization of the sensor network collecting the data.
+                                 </p>
+                                 <p>
+                                     You can reach the Metadata Browser from the HADataC portal page by clicking "Browse Metadata", or, if you are already on another
+                                      page, by clicking "Metadata Browser" in the black top bar. <mark>Refer to the image of the index HADatAc page above.</mark>
+                                 </p>
+                                 <h5><u>Platform, Instrument, and Detector Model Hierarchies</u></h5>
+                                 <p>
+                                     These three displays show the models of sensors in your data collection project. They are represented as a hierarchy backed
+                                     by the HASNetO and VSTOI ontologies. Sensor models are considered classes - that is, they are general concepts rather than
+                                     physical objects. The default "tree view" on these pages displays this hierarchy as an interactive tree, with broader
+                                     concepts on the left side, branching out into more specific ones towards the right. Click nodes to expand or contract subtrees
+                                     (all are expanded by default), or mouse over a node for additional information.
+                                 </p>
+                                 <p>
+                                     The "table view" contains the same information as a flat table. Click the name of the model to expand its block entry in
+                                     order to see detailed information about that sensor model. The table views all have printer-friendly versions available -
+                                     while you are on the table view tab, you can print from your browser in order to get a paper copy of the list with all
+                                     accordion tabs expanded.
+                                 </p>
+                                 <h6>Platform Models</h6>
+                                 <ul>
+                                     <li>Name: The name of the model</li>
+                                     <li>Maker: The manufacturer</li>
+                                     <li>Description: Some description of the Platform Model, such as where it is used, etc</li>
+                                 </ul>
+                                 <h6>Instrument Models</h6>
+                                 <ul>
+                                     <li>Name: Model name</li>
+                                     <li>Maker: Manufacturer name</li>
+                                     <li>Description: Short description of Instrument model</li>
+                                     <li>Number of attached detectors: How many Detectors are permanently part of this Instrument</li>
+                                     <li>Maximum number of detachable detectors: How many removable Detectors may be attached to this Instrument</li>
+                                     <li>Maximum number of logged measurements: How many measurements can be stored</li>
+                                     <li>Min and max operating temperature: Temperature range inside which the Instrument is expected to function</li>
+                                 </ul>
+                                 <h6>Detector Models</h6>
+                                 <ul>
+                                     <li>Name: Model name</li>
+                                     <li>Maker: Manufacturer name</li>
+                                     <li>Description: Short description of Detector model</li>
+                                     <li><strong>Sensing Perspective</strong>: A description of what and where this Detector is designed to measure.
+                                          Each Sensing Perspective has its own set of additional properties:</li>
+                                    <ul>
+                                        <li>Name: A pairing of an Entity and a Characteristic, to help uniquely define a Detector's context. This is
+                                            important in cases where there may be measurements of two different Characteristics of the same Entity
+                                            (for example, AirTemperature vs AirRelativeHumidity), or the same Characteristic of two different Entities
+                                            (such as AirTemperature vs WaterTemperature)
+                                        </li>
+                                        <li>Accuracy %: The expected accuracy of this Detector when measuring the given EntityCharacteristic, expressed as a percentage</li>
+                                        <li>Accuracy R2</li>
+                                        <li>Output resolution: The resolution of the measurements taken by the Detector</li>
+                                        <li>Max response time</li>
+                                        <li>Min and max range of values: Lowest and highest numbers the Detector records</li>
+                                    </ul>
+                                </ul>
+                                <h5><u>Platform, Instrument, and Detector Lists</u></h5>
+                                <p>
+                                    These displays are for viewing individual sensors. Each one is an instance of a model, which is why you may see some names repeated
+                                    in the table list. For example, your project may use two thermometers of the same model; HASNetO requires that each one have its own
+                                    unique identifier (typically a serial number), but because they are both the same class (eg, model), they still share certain
+                                    characteristics such as manufacturer or design specifications.
+                                </p>
+                                <p>
+                                    While the Model Hierarchy view gives information about the properties common to all individual sensors of that model, the individual
+                                    Lists views shows properties specific to each single sensor. There is only a table view for these displays, and each entry can be
+                                    expanded to see detailed information about that sensor. Each table can also be printed out with all entries expanded, if you require
+                                    a paper copy for evaluation purposes.
+                                </p>
+                                <h6>Platform List</h6>
+                                <ul>
+                                    <li>Name: Model name of the Platform</li>
+                                    <li>Serial Number: Unique identifier for this Platform</li>
+                                    <li>Lat-long location: Latitude and Longitude describing where this Platform is deployed</li>
+                                </ul>
+                                <h6>Instrument List</h6>
+                                <ul>
+                                    <li>Name: Instrument model name</li>
+                                    <li>Serial Number: Instrument's unique identifier</li>
+                                </ul>
+                                <h6>Detector List</h6>
+                                <ul>
+                                    <li>Name: Model name of the Detector</li>
+                                    <li>Serial Number: Detector's unique identifier</li>
+                                </ul>
+                                <h5><u>Entity, Characteristic, and EntityCharacteristic</u></h5>
+                                <p>
+                                    These displays show metadata for what your collection measures. These sections leverage the Extensible Observation Ontology
+                                    (OBOE) to describe the Entity and Characteristic of the measurements in order to provide context for the data. In the OBOE
+                                    model, the Entity is the thing being observed (such as the water in a lake, the air in a room, or a sample in a laboratory),
+                                    and the Characteristic is the specific thing being measured (such as dissolved oxygen saturation, relative humidity, or color).
+                                    Note that it is possible for a sensor to also be an Entity if it also logs data about itself, such as battery charge. Both Entities
+                                    and Characteristics are more general concepts, and there is no one-to-one mapping between Entities and Characteristics in OBOE:
+                                    two Entities may share a Characteristic (ie, water temperature and air temperature), and a single Entity may have multiple
+                                    Characteristics (ie, temperature, relative humidity, and particulate matter are all possible Characteristics of air).
+                                </p>
+                                <p>
+                                    Entity and Characteristic displays also contain both a tree view showing the hierarchy from the OBOE ontology, including
+                                    whatever extensions have been made to include concepts relevant to your data collections. As with the sensors' tree views,
+                                    subtrees can be expanded/contracted by clicking on the nodes, and mousing over displays additional information in a panel
+                                    on the right side.
+                                </p>
+                                <h6>EntityCharacteristic</h6>
+                                <p>
+                                    An EntityCharacteristic is, as the name suggests, a pairing of an Entity with a Characteristic. These are the more specific
+                                    things that we can match to Detectors as "sensing perspectives". If a thermometer only works in water, then it has "WaterTemperature"
+                                    as the EntityCharacteristic of its Sensing Perspective. This differentiates it from a different thermometer that only works in air -
+                                    both measure the same Characteristic, but of different Entities. A thermometer that can be used for both AirTemperature and
+                                    WaterTemperature has two Sensing Perspectives.
+                                </p>
+                                <p>
+                                    The EntityCharacteristic view is a pair of tables that shows the matchings between Entity and Characteristic.
+                                    The information in both tables is the same, but displayed differently: one with the Entity in the leftmost column,
+                                    and one with the Characteristic in the leftmost column. Both are provided so that you can decide which is easier
+                                    to use for your specific task. In both tables, you may sort any column alphabetically by clicking the column name.
+                                </p>
+                                <h5><u>Standards</u></h5>
+                                <p>
+                                    The OBOE-Standards ontology provides URI's for units to describe your measurements. The base ontology includes both
+                                    SI units and Imperial units, but may require extensions in order to fully cover all units your data collections
+                                    require. The structure of the ontology separates units into BaseUnits, which cannot be "naturally decomposed into
+                                    other units" (eg, second, or degree Celsius); DerivedUnits, which "raise a base unit to an integer power other
+                                    than 0 or 1" (eg, meter-squared); and CompositeUnits, which are composed of one or more base or composite units
+                                    (eg, meter-per-second). The tree hierarchy here can be helpful to determine how to classify units you are adding.
+                                </p>
+                                <h5><u>Agents</u></h5>
+                                <p>
+                                    Agents include both individuals and organizations related to your data collection project. This naturally
+                                    includes people involved in the data collection itself, as well as any organizations/labs/groups with which
+                                    they may be affiliated. The Agent network also includes the companies who manufacture the sensors that your
+                                    project uses - this helps HADataC store information about their contact information, in case reaching a
+                                    manufacturer is necessary to answer questions, and also helps keep documentation resources published by
+                                    that company close at hand.
+                                </p>
+                                <p>
+                                    Each node is either a person or an organization, and are connected to other organization nodes to
+                                    represent a part-of relationship. For example, a professor's person node will be connected to their
+                                    affiliated lab or department's organization node; this is then connected to a node for the university,
+                                    which may also have other labs/departments branching off of it, as well.
+                                </p>
                             </div>
                         </div>
                         <div class="row" id="mqh"> <!-- Metadata Quality Heuristics -->
                             <div class="col-md-8 col-md-offset-2">
-                                <h5 class="center-text">Metadata Quality Heuristics</h5>
-
+                                <h4 class="center-text">Metadata Quality Heuristics</h4>
+                                <h5><u>Grades</u></h5>
+                                <p>For each field (property):</p>
+                                <ul>
+                                    <li>A - Metadata is present, complete, and correct</li>
+                                    <li>B - Metadata is present and correct, but incomplete</li>
+                                    <li>C - There is metadata, but it is incorrect</li>
+                                    <li>D - Metadata is not present, but it is known</li>
+                                    <li>E - Metadata is not present; values are unknown</li>
+                                    <li>NA - Metadata is not present but field is not necessary for this item</li>
+                                </ul>
+                                <p>If there is a concept or individual missing completely:</p>
+                                <ul>
+                                    <li>X - Item is omitted entirely (and therefore all fields are either D or E)</li>
+                                </ul>
+                                <h5><u>Lists - Sensor Network</u></h5>
+                                <h6>Platform Model Hierarchy</h6>
+                                <p>
+                                    Ensure that there is one entry for each Platform Model. Verify that each entry has all of the following properties:
+                                </p>
+                                <ul>
+                                    <li>Name</li>
+                                    <li>Maker</li>
+                                    <li>Description</li>
+                                </ul>
+                                <h6>Platform Lists</h6>
+                                <p>Ensure there is one entry for each Platform, and each has the following properties:</p>
+                                <ul>
+                                    <li>Name (Note that this might not be unique if there are two separate platforms of the same model)</li>
+                                    <li>Serial number (This must be unique for each Platform, regardless of model)</li>
+                                    <li>Lat-long location</li>
+                                </ul>
+                                <h6>Instrument Model Hierarchy</h6>
+                                <p>Verify that there is one entry for each Instrument Model, each with properties:</p>
+                                <ul>
+                                    <li>Name</li>
+                                    <li>Maker</li>
+                                    <li>Description</li>
+                                </ul>
+                                <p>
+                                    Not all of these are applicable to every Instrument Model; verify that these fields contain data where necessary:
+                                </p>
+                                <ul>
+                                    <li>Number of attached detectors</li>
+                                    <li>Maximum number of detachable detectors</li>
+                                    <li>Maximum number of logged measurements</li>
+                                    <li>Min and max operating temperature (+ units)</li>
+                                </ul>
+                                <h6>Instruments</h6>
+                                <p>Ensure there is one entry for each Instrument, and all have both properties:</p>
+                                <ul>
+                                    <li>Name (Again, not necessarily unique)</li>
+                                    <li>Serial number (Must be unique)</li>
+                                </ul>
+                                
                             </div>
                         </div>
                     </div>
@@ -119,7 +352,7 @@
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2">
                                 <h4 class="center-text">Static Metadata Spreadsheets</h4>
-                                
+
                             </div>
                         </div>
                         <div class="row" id="psms"> <!-- Parsing Static Metadata Spreadsheets -->
