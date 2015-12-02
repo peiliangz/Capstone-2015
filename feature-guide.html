@@ -46,135 +46,475 @@
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-->
         </nav>
-        <!--
-        <div class="alert alert-danger landing-alert">
-             <div class="container text-center">
-                 <h5>Get a 10% discount on selected products until the 5th of November!</h5>
-            </div>
-        </div>
-        -->
-
         <div class="wrapper">
             <div class="landing-header section-gray">
                 <div class="container">
                     <div class="motto">
-                        <h1 class="title-uppercase">HADatAc Information Website</h1>
-                        <h3>Helpful information for the HADatAc Framework</h3>
-                        <br />
-                        <div class="row text-center">
-                            <div class="col-md-4 column">
-                                <h4>About HADatAc</h4>
-                                <a class="btn btn-fill btn-info" href="./about.html">About HADatAc</a>
-                            </div>
-                            <div class="col-md-4 column">
-                                <h4>Install Guide</h4>
-                                <a href="./install-guide.html" class="btn btn-fill btn-info">Install Guide</a>
-                            </div>
-                            <div class="col-md-4 column">
-                                <h4>Feature Walkthrough</h4>
-                                <a href="./feature-guide.html" class="btn btn-fill btn-info">Feature Walkthrough</a>
-                            </div>
-                        </div>
+                        <h1 class="title-uppercase">HADatAc Feature Guide</h1>
+                        <h3>Helpful information about the core features</h3>
                     </div>
                 </div>
             </div>
+            <div class=" section special-section section-light-brown" id="breadcrumb-nav">
+                <ul class="col-md-2 col-md-offset-3">
+                    <li><a href="#dm" class="link"><h5>Data Management</h5></a></li>
+                    <!-- <ul>
+                        <li></li>
+                    </ul> -->
+                </ul>
+                <ul class="col-md-2">
+                    <li><a href="#mb" class="link"><h5>Metadata   Browser</h5></a></li>
+                    <ul>
+                        <li><a href="#mqh" class="link"><h6>Metadata Quality Heuristics</h6></a></li>
+                    </ul>
+                </ul>
+                <ul class="col-md-2">
+                    <li><a href="#sms" class="link"><h5>Static Metadata Spreadsheets</h5></a></li>
+                    <ul>
+                        <li><a href="#psms" class="link"><h6>Parsing Static Metadata Spreadsheets</h6></a></li>
+                    </ul>
+                </ul>
+            </div>
             <div class="main">
-                <div class="section text-center landing-section section-brown">
+                <!-- Content -->
+                <div class="section landing-section section-brown">
+                    <div class="container">
+                        <div class="row" id="full-first-page-image">
+                            <div class="col-md-4 col-md-offset-4">
+                                <h4 class="center-text">The Index HADatAc Page</h4>
+                            </div>
+                            <img src="./assets/first-full-page-image-edit.png" class="center-img">
+
+                        </div>
+                    </div>
+                </div>
+                <div class=" section section-gray landing-section" id="dm"> <!-- Data Management -->
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2">
-                                <h2>What is HADatAc?</h2>
-                                <h5>[some short info about hadatac]</h5>
-                                <br />
-                                <a href="./about.html" class="btn btn-danger btn-fill">Learn More</a>
+                                <h3>Data Management</h3>
+                                <h4>On the HADatAc use of URIs</h4>
+                                <h5>Static metadata URIs</h5>
+                                <h6><u>For Classes</u></h6>
+                                <p>
+                                    Static metadata classes are intended to be reused across multiple projects, and shared through HADataC.org.
+                                     It is possible for one project to have its own set of classes without sharing the classes outside the project.
+                                      If that is the case, it is up to the project to define its own policy on how to assign URIs to classes of
+                                      static metadata.
+                                 </p>
+                                 <p>
+                                     If the project shares classes, we recommend the project to consider the use of the <a class="link" href="http://hadatac.org">hadatac.org</a>
+                                      as the base for shared resources. <mark>To request a hadatac.org uri, please contact the email list</mark>
+                                </p>
+                                <h6><u>For Instances</u></h6>
+                                <p>
+                                    Static metadata instances are intended to be privately shared within projects. For instance, the serial number
+                                     of instruments are not something that is of interest to other projects. Every HADatAc installation has a host
+                                      URI, e.g., <a class="link" href="http://example.org">http://example.org</a>. The URI of a HADataC installation is typically
+                                       the host URI followed with /hadatac/ (trailing slash is needed),
+                                       e.g., <a class="link" href="http://example.org/hadatac/">http://example.org/hadatac/</a>.
+                                </p>
+                                <p>
+                                    URIs of instances are often stored in a folder within the host machine, which is associated with a given
+                                    URL in case the project decides to share their instances. For instance, we can create a folder meta
+                                     (<a class="link" href="http://example.org/meta/">http://example.org/meta/</a>).
+                                </p>
+                                <h5>Dynamic metadata URIs</h5>
+                                <p>
+                                    URI generators is a piece of software responsible for generating dynamic metadata such as deployments, data collections and datasets.
+                                    They are called URI generators because they are also responsible for generating and assigning URIs for dynamic metadata as they are created.
+                                </p>
+                                <p>
+                                    Every HADatac installation has one console, which includes a Deployment Management module. The console's Deployment Management is a URI generator.
+                                    MOCCASN, the Android application used for capturing contextual knowledge about human interventions is another URI generator.
+                                    The console's Deployment Management module is already pre-registered with HADataC, and its URI generator ID is '00000001'.
+                                    All other URI generators need to be registered with a HADataC installation, which will assign a new ID for each registered URI generator.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!--
-                <div class="section section-light-brown landing-section">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-4 column">
-                                <h4>First Attribute</h4>
-                                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
-                                <a class="btn btn-danger btn-simple" href="#">See more <i class="fa fa-chevron-right"></i></a>
-                            </div>
-                            <div class="col-md-4 column">
-                                <h4>Second Attribute</h4>
-                                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
-                                <a class="btn btn-danger btn-simple" href="#">See more <i class="fa fa-chevron-right"></i></a>
-                            </div>
-                            <div class="col-md-4 column">
-                                <h4>Third Attribute</h4>
-                                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
-                                <a class="btn btn-danger btn-simple" href="#">See more <i class="fa fa-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section section-dark text-center landing-section">
-                    <div class="container">
-                        <h2>Let's talk about us</h2>
-                        <div class="col-md-4">
-                            <div class="team-player">
-                                <img src="../assets/paper_img/chet_faker_2.jpg" alt="Thumbnail Image" class="img-circle img-responsive">
-                                <h5>Chet Faker <br /><small class="text-muted">Music</small></h5>
-                                <p>You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="team-player">
-                                <img src="../assets/paper_img/flume.jpg" alt="Thumbnail Image" class="img-circle img-responsive">
-                                <h5>Flume <br /><small class="text-muted">Production</small></h5>
-                                <p>You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="team-player">
-                                <img src="../assets/paper_img/banks.jpg" alt="Thumbnail Image" class="img-circle img-circle img-responsive">
-                                <h5>Banks <br /><small class="text-muted">Music</small></h5>
-                                <p>You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section landing-section">
+                <div class="section section-blue landing-section" id="mb"> <!-- Metadata Browser -->
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2">
-                                <h2 class="text-center">Keep in touch?</h2>
-                                <form class="contact-form">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label>Name</label>
-                                            <input class="form-control" placeholder="Name">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label>Email</label>
-                                            <input class="form-control" placeholder="Email">
-                                        </div>
-                                    </div>
-                                    <label>Message</label>
-                                    <textarea class="form-control" rows="4" placeholder="Tell us your thoughts and feelings..."></textarea>
-                                    <div class="row">
-                                        <div class="col-md-4 col-md-offset-4">
-                                            <button class="btn btn-danger btn-block btn-lg btn-fill">Send Message</button>
-                                        </div>
-                                    </div>
-                                </form>
+                                <h3 class="center-text">Metadata Browser</h3>
+                                <p>
+                                    The Metadata Browser allows you to examine the parts of your data collection that give it context, including the entities observed,
+                                     the characteristics being measured, and the sensors taking the measurements.
+                                     Metadata is kept as linked data in order to preserve the relationships between it and the data, and leverages ontologies already
+                                     in use by other scentific communities to aid interoperability. Ontologies also provide a hierarchical structure of concepts, which
+                                      can help lend insight into the organization of the sensor network collecting the data.
+                                 </p>
+                                 <p>
+                                     You can reach the Metadata Browser from the HADataC portal page by clicking "Browse Metadata", or, if you are already on another
+                                      page, by clicking "Metadata Browser" in the black top bar. <mark>Refer to the image of the index HADatAc page above.</mark>
+                                 </p>
+                                 <h5><u>Platform, Instrument, and Detector Model Hierarchies</u></h5>
+                                 <p>
+                                     These three displays show the models of sensors in your data collection project. They are represented as a hierarchy backed
+                                     by the HASNetO and VSTOI ontologies. Sensor models are considered classes - that is, they are general concepts rather than
+                                     physical objects. The default "tree view" on these pages displays this hierarchy as an interactive tree, with broader
+                                     concepts on the left side, branching out into more specific ones towards the right. Click nodes to expand or contract subtrees
+                                     (all are expanded by default), or mouse over a node for additional information.
+                                 </p>
+                                 <p>
+                                     The "table view" contains the same information as a flat table. Click the name of the model to expand its block entry in
+                                     order to see detailed information about that sensor model. The table views all have printer-friendly versions available -
+                                     while you are on the table view tab, you can print from your browser in order to get a paper copy of the list with all
+                                     accordion tabs expanded.
+                                 </p>
+                             </div>
+                            <div class="col-md-4">
+                                 <h6>Platform Models</h6>
+                                 <ul>
+                                     <li>Name: The name of the model</li>
+                                     <li>Maker: The manufacturer</li>
+                                     <li>Description: Some description of the Platform Model, such as where it is used, etc</li>
+                                 </ul>
+                             </div>
+                             <div class="col-md-4">
+                                 <h6>Instrument Models</h6>
+                                 <ul>
+                                     <li>Name: Model name</li>
+                                     <li>Maker: Manufacturer name</li>
+                                     <li>Description: Short description of Instrument model</li>
+                                     <li>Number of attached detectors: How many Detectors are permanently part of this Instrument</li>
+                                     <li>Maximum number of detachable detectors: How many removable Detectors may be attached to this Instrument</li>
+                                     <li>Maximum number of logged measurements: How many measurements can be stored</li>
+                                     <li>Min and max operating temperature: Temperature range inside which the Instrument is expected to function</li>
+                                 </ul>
+                             </div>
+                             <div class="col-md-4">
+                                 <h6>Detector Models</h6>
+                                 <ul>
+                                     <li>Name: Model name</li>
+                                     <li>Maker: Manufacturer name</li>
+                                     <li>Description: Short description of Detector model</li>
+                                     <li><strong>Sensing Perspective</strong>: A description of what and where this Detector is designed to measure.
+                                          Each Sensing Perspective has its own set of additional properties:</li>
+                                    <ul>
+                                        <li>Name: A pairing of an Entity and a Characteristic, to help uniquely define a Detector's context. This is
+                                            important in cases where there may be measurements of two different Characteristics of the same Entity
+                                            (for example, AirTemperature vs AirRelativeHumidity), or the same Characteristic of two different Entities
+                                            (such as AirTemperature vs WaterTemperature)
+                                        </li>
+                                        <li>Accuracy %: The expected accuracy of this Detector when measuring the given EntityCharacteristic, expressed as a percentage</li>
+                                        <li>Accuracy R2</li>
+                                        <li>Output resolution: The resolution of the measurements taken by the Detector</li>
+                                        <li>Max response time</li>
+                                        <li>Min and max range of values: Lowest and highest numbers the Detector records</li>
+                                    </ul>
+                                </ul>
+                            </div>
+                            <div class="col-md-8 col-md-offset-2">
+                                <h5><u>Platform, Instrument, and Detector Lists</u></h5>
+                                <p>
+                                    These displays are for viewing individual sensors. Each one is an instance of a model, which is why you may see some names repeated
+                                    in the table list. For example, your project may use two thermometers of the same model; HASNetO requires that each one have its own
+                                    unique identifier (typically a serial number), but because they are both the same class (eg, model), they still share certain
+                                    characteristics such as manufacturer or design specifications.
+                                </p>
+                                <p>
+                                    While the Model Hierarchy view gives information about the properties common to all individual sensors of that model, the individual
+                                    Lists views shows properties specific to each single sensor. There is only a table view for these displays, and each entry can be
+                                    expanded to see detailed information about that sensor. Each table can also be printed out with all entries expanded, if you require
+                                    a paper copy for evaluation purposes.
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <h6>Platform List</h6>
+                                <ul>
+                                    <li>Name: Model name of the Platform</li>
+                                    <li>Serial Number: Unique identifier for this Platform</li>
+                                    <li>Lat-long location: Latitude and Longitude describing where this Platform is deployed</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <h6>Instrument List</h6>
+                                <ul>
+                                    <li>Name: Instrument model name</li>
+                                    <li>Serial Number: Instrument's unique identifier</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <h6>Detector List</h6>
+                                <ul>
+                                    <li>Name: Model name of the Detector</li>
+                                    <li>Serial Number: Detector's unique identifier</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-8 col-md-offset-2">
+                                <h5><u>Entity, Characteristic, and EntityCharacteristic</u></h5>
+                                <p>
+                                    These displays show metadata for what your collection measures. These sections leverage the Extensible Observation Ontology
+                                    (OBOE) to describe the Entity and Characteristic of the measurements in order to provide context for the data. In the OBOE
+                                    model, the Entity is the thing being observed (such as the water in a lake, the air in a room, or a sample in a laboratory),
+                                    and the Characteristic is the specific thing being measured (such as dissolved oxygen saturation, relative humidity, or color).
+                                    Note that it is possible for a sensor to also be an Entity if it also logs data about itself, such as battery charge. Both Entities
+                                    and Characteristics are more general concepts, and there is no one-to-one mapping between Entities and Characteristics in OBOE:
+                                    two Entities may share a Characteristic (ie, water temperature and air temperature), and a single Entity may have multiple
+                                    Characteristics (ie, temperature, relative humidity, and particulate matter are all possible Characteristics of air).
+                                </p>
+                                <p>
+                                    Entity and Characteristic displays also contain both a tree view showing the hierarchy from the OBOE ontology, including
+                                    whatever extensions have been made to include concepts relevant to your data collections. As with the sensors' tree views,
+                                    subtrees can be expanded/contracted by clicking on the nodes, and mousing over displays additional information in a panel
+                                    on the right side.
+                                </p>
+                                <h6>EntityCharacteristic</h6>
+                                <p>
+                                    An EntityCharacteristic is, as the name suggests, a pairing of an Entity with a Characteristic. These are the more specific
+                                    things that we can match to Detectors as "sensing perspectives". If a thermometer only works in water, then it has "WaterTemperature"
+                                    as the EntityCharacteristic of its Sensing Perspective. This differentiates it from a different thermometer that only works in air -
+                                    both measure the same Characteristic, but of different Entities. A thermometer that can be used for both AirTemperature and
+                                    WaterTemperature has two Sensing Perspectives.
+                                </p>
+                                <p>
+                                    The EntityCharacteristic view is a pair of tables that shows the matchings between Entity and Characteristic.
+                                    The information in both tables is the same, but displayed differently: one with the Entity in the leftmost column,
+                                    and one with the Characteristic in the leftmost column. Both are provided so that you can decide which is easier
+                                    to use for your specific task. In both tables, you may sort any column alphabetically by clicking the column name.
+                                </p>
+                                <h5><u>Standards</u></h5>
+                                <p>
+                                    The OBOE-Standards ontology provides URI's for units to describe your measurements. The base ontology includes both
+                                    SI units and Imperial units, but may require extensions in order to fully cover all units your data collections
+                                    require. The structure of the ontology separates units into BaseUnits, which cannot be "naturally decomposed into
+                                    other units" (eg, second, or degree Celsius); DerivedUnits, which "raise a base unit to an integer power other
+                                    than 0 or 1" (eg, meter-squared); and CompositeUnits, which are composed of one or more base or composite units
+                                    (eg, meter-per-second). The tree hierarchy here can be helpful to determine how to classify units you are adding.
+                                </p>
+                                <h5><u>Agents</u></h5>
+                                <p>
+                                    Agents include both individuals and organizations related to your data collection project. This naturally
+                                    includes people involved in the data collection itself, as well as any organizations/labs/groups with which
+                                    they may be affiliated. The Agent network also includes the companies who manufacture the sensors that your
+                                    project uses - this helps HADataC store information about their contact information, in case reaching a
+                                    manufacturer is necessary to answer questions, and also helps keep documentation resources published by
+                                    that company close at hand.
+                                </p>
+                                <p>
+                                    Each node is either a person or an organization, and are connected to other organization nodes to
+                                    represent a part-of relationship. For example, a professor's person node will be connected to their
+                                    affiliated lab or department's organization node; this is then connected to a node for the university,
+                                    which may also have other labs/departments branching off of it, as well.
+                                </p>
                             </div>
                         </div>
-
-
+                        <div class="row" id="mqh"> <!-- Metadata Quality Heuristics -->
+                            <div class="col-md-8 col-md-offset-2">
+                                <h4 class="center-text">Metadata Quality Heuristics</h4>
+                                <h5><u>Grades</u></h5>
+                                <p>For each field (property):</p>
+                                <ul>
+                                    <li>A - Metadata is present, complete, and correct</li>
+                                    <li>B - Metadata is present and correct, but incomplete</li>
+                                    <li>C - There is metadata, but it is incorrect</li>
+                                    <li>D - Metadata is not present, but it is known</li>
+                                    <li>E - Metadata is not present; values are unknown</li>
+                                    <li>NA - Metadata is not present but field is not necessary for this item</li>
+                                </ul>
+                                <p>If there is a concept or individual missing completely:</p>
+                                <ul>
+                                    <li>X - Item is omitted entirely (and therefore all fields are either D or E)</li>
+                                </ul>
+                                <h5><u>Lists - Sensor Network</u></h5>
+                                <h6>Platform Model Hierarchy</h6>
+                                <p>
+                                    Ensure that there is one entry for each Platform Model. Verify that each entry has all of the following properties:
+                                </p>
+                                <ul>
+                                    <li>Name</li>
+                                    <li>Maker</li>
+                                    <li>Description</li>
+                                </ul>
+                                <h6>Platform Lists</h6>
+                                <p>Ensure there is one entry for each Platform, and each has the following properties:</p>
+                                <ul>
+                                    <li>Name (Note that this might not be unique if there are two separate platforms of the same model)</li>
+                                    <li>Serial number (This must be unique for each Platform, regardless of model)</li>
+                                    <li>Lat-long location</li>
+                                </ul>
+                                <h6>Instrument Model Hierarchy</h6>
+                                <p>Verify that there is one entry for each Instrument Model, each with properties:</p>
+                                <ul>
+                                    <li>Name</li>
+                                    <li>Maker</li>
+                                    <li>Description</li>
+                                </ul>
+                                <p>
+                                    Not all of these are applicable to every Instrument Model; verify that these fields contain data where necessary:
+                                </p>
+                                <ul>
+                                    <li>Number of attached detectors</li>
+                                    <li>Maximum number of detachable detectors</li>
+                                    <li>Maximum number of logged measurements</li>
+                                    <li>Min and max operating temperature (+ units)</li>
+                                </ul>
+                                <h6>Instruments</h6>
+                                <p>Ensure there is one entry for each Instrument, and all have both properties:</p>
+                                <ul>
+                                    <li>Name (Again, not necessarily unique)</li>
+                                    <li>Serial number (Must be unique)</li>
+                                </ul>
+                                <h6>Detector Models</h6>
+                                <p>Verify there is one entry per Detector Model:</p>
+                                <ul>
+                                    <li>Name</li>
+                                    <li>Maker</li>
+                                    <li>Description</li>
+                                </ul>
+                                <p>In addition, each Detector Model should have at least one Sensing Perspective.
+                                    A Sensing Perspective should have the following properties, however it is possible
+                                    that not all are known for every Sensing Perspective:
+                                </p>
+                                <ul>
+                                    <li>EntityCharacteristic name (Necessary)</li>
+                                    <li>Accuracy %</li>
+                                    <li>Accuracy R2</li>
+                                    <li>Output resolution</li>
+                                    <li>Max response time (+ units)</li>
+                                    <li>Min and max range of values</li>
+                                </ul>
+                                <h6>Detector List</h6>
+                                <p>As with other lists of individuals, verify that there is one entry for each Detector with the following information:</p>
+                                <ul>
+                                    <li>Name (Might not be unique)</li>
+                                    <li>Serial number (Must be unique)</li>
+                                </ul>
+                                <h5><u>Lists - Measurements</u></h5>
+                                <h6>Entities</h6>
+                                <p>Review list of Entities to be sure that everything your project plans to observe for data measurements is included.
+                                    Note that context is very important in differentiating Entities - for example, measuring water in a lake is different
+                                    from measuring a sample of water brought back to the lab.</p>
+                                <h6>Characteristics</h6>
+                                <h6>EntityCharacteristics</h6>
+                                <p>A unique pairs of an Entity and a Characteristic, for describing Sensing Perspectives.
+                                    There will not be an EntityCharacteristic for <i>every</i> pairing of Entity and Characteristic, only those represented in the Sensing Perspectives.</p>
+                                <ul>
+                                    <li>Entity (Exactly one per entry)</li>
+                                    <li>Characteristic (Exactly one per entry)</li>
+                                </ul>
+                                <h6>Standards</h6>
+                                <h6>Agents</h6>
+                                <p>There are two different types of thing represented as "Agents" - People and Organizations. This graph should be connected, with the placeholder
+                                    Agent node at the root. Edges in this graph represent a part-of/has-part relationship.</p>
+                                <ul>
+                                    <li>Name (For both People and Organizations)</li>
+                                    <li>Email (Where applicable)</li>
+                                    <li>Website (Where applicable)</li>
+                                    <li>Some parent node in the graph - an Organization may be a part of another organization, or, if it stands alone, then its parent is the Agent placeholder at the center. Similarly, a person may belong to one or more Organizations, or, if completely unaffiliated, will connect only to the Agent placeholder.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            -->
-        </div> <!-- End main -->
-    </div> <!-- End wrapper -->
+                <div class="section section-easter landing-section" id="sms"> <!-- Static Metadata Spreadsheets -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <h4 class="center-text">Static Metadata Spreadsheets</h4>
+                                <h5>What are Static Metadata Spreadsheets?</h5>
+                                <p>They are spreadsheets used by domain experts to document data-related <a href="#dm">static metadata</a>. Like any other spreadsheet, Static Metadata Spreadsheets
+                                    are composed of one or more sheets. Once spreadsheets are filled out completely, they can be parsed, and if they are syntactically correct,
+                                    they can be added into HADatAc's knowledge base.
+                                </p>
+                                <h5>How Do I Build a Static Metadata Spreadsheet?</h5>
+                                <p>Static Metadata Spreadsheets are expected to be developed from spreadsheet templates. In a template we have the following:</p>
+                                <ul>
+                                    <li>one of more sheets</li>
+                                    <li>each sheet has a name (a simple string)</li>
+                                    <li>each sheet has just one title row, and nothing else</li>
+                                    <li>the title row is composed of two or more columns, each column containing a label</li>
+                                </ul>
+                                <p>Once you go through the process of reading the template of a static metadata spreadsheet, you may start the process of describing
+                                    your static metadata by filling out static metadata spreadsheets, one row a time.</p>
+                                <p>These are some of the rules that you most follow:</p>
+                                <ol>
+                                    <li>Do not add or remove columns</li>
+                                    <li>It is okay to group create a spreadsheet that is about a single concept or instance. It is also okay to build a single spreadsheet for all concepts</li>
+                                </ol>
+                                <h5>Where Can I Find the Static Metadata Spreadsheet Templates?</h5>
+                                <p>Use the templates below to create metadata for your scientific activities. A single static spreadsheet template may be used to record needed basic metadata.</p>
+                                <ul>
+                                    <li><a class="link" href="https://github.com/paulopinheiro1234/hadatac/blob/master/public/example/metadata/templates/HASNetO-Template-Full.xlsx?raw=true">Full Spreadsheet Template</a></li>
+                                </ul>
+                                <p>Alternatively, the three complementary spreadsheets listed below may be used to record needed metadata. It is recommended that the these spreadsheets are used
+                                    and populated into HADataC following the order in the list below.</p>
+                                <ul>
+                                    <li><a class="link" href="https://github.com/paulopinheiro1234/hadatac/blob/master/public/example/metadata/templates/HASNetO-Template-Agents.xlsx?raw=true">Agent Spreadsheet Template</a>
+                                        - Used to create agents (including users) and organizations (see example Agent spreadsheet)</li>
+                                    <li><a class="link" href="https://github.com/paulopinheiro1234/hadatac/blob/master/public/example/metadata/templates/HASNetO-Template-Classes.xlsx?raw=true">Classes Spreadsheet Template</a>
+                                        - Used to specialize classes of the family of Human-Aware Science Ontologies (see example Class spreadsheet)</li>
+                                    <li><a class="link" href="https://github.com/paulopinheiro1234/hadatac/blob/master/public/example/metadata/templates/HASNetO-Template-Instances.xlsx?raw=true">Instances Spreadsheet Template</a>
+                                        - Used to create instances of registered classes (see example Instance spreadsheet)</li>
+                                </ul>
+                                <h5>Which Kind of Content Am I Expected to See Inside of Each Sheet?</h5>
+                                <p>Each sheet is either a concept kind (or class) or a list of concept instances. For instance, the sheet named InstrumentModels list the models of the instruments in a sensor network.
+                                    The sheet named Instruments lists the actual instruments in the sensor network. The sheets are named according to the concepts described in the following paper (the reading of the
+                                    paper is strongly suggested):</p>
+                                <cite>
+                                    Pinheiro, Paulo., McGuinness, Deborah.L., and Santos, Henrique. 2015. Human-Aware Sensor Network Ontology: Semantic Support for Empirical Data Collection. In Proceedings of International Semantic Web Conference (ISWC) 2015 (October 11-15 2015, Bethlehem, PA, US)
+                                </cite>
+                                <a class="link" href="http://tw.rpi.edu/media/2015/10/12/10c35/ISWC-LISC-2015-Paper.pdf">(PDF)</a>
+                                <h5>What is the Meaning of the hasURI Column At the Beginning of Each Sheet?</h5>
+                                <p>Every concept and instance in a sensor network should have a name, and the name of concepts and instances are URIs (unified resource identifiers).
+                                    The first column is named hasURI and contains the URI of the concept or instance described in the row of the sheet. If the sheet contains concepts,
+                                    the first column identifies the URI of each concept that is going to be registered in HADatAc. If the sheet contains instances, the first column
+                                    identifies the URI of each actual instances registered in HADatAc.</p>
+                                <h5>How Do I Know if a Sheet is Used to Describe Concepts or Instances?</h5>
+                                <p>The header of the second column tells you if a sheet is about concepts or instances. If the sheet is about classes the header is <strong>rdf:subClassOf</strong>. If the sheet is about instances the header is <strong>a</strong>.</p>
+                                <p>If a sheet is about a concept, the concept is from the Human-Aware Sensor Network Ontology (HASNetO), which is available at <a class="link" href="http://hadatac.org/ont/hasneto/">http://hadatac.org/hasneto/</a>.</p>
+                                <p>These are the URIs of some core concepts</p>
+                                <ul>
+                                    <li>Platform Model</li>
+                                    <li>Instrument Model</li>
+                                    <li>Detector Model</li>
+                                    <li>Entity</li>
+                                    <li>Characteristic</li>
+                                </ul>
+                                <h5>How Can I See the Hierarchies of Core HADatAc Concepts?</h5>
+                                <p>To be implemented at a later date.</p>
+                                <h5>How Can I Add A New Concept Under an Existing Subconcept?</h5>
+                                <p>When browsing an hierarchy, you can inspect the concepts inside the hierarchy but hovering the mouse over the concepts.
+                                    The info box on the right side of the browser would show you the details of the concept currently selected.
+                                    One of the properties shown in the info box is the URI of the concept. If this is the concept that is going to be the
+                                    parent of a new concept to be included, this is the URI that should be added to the <strong>rdfs:subClassOf</strong>
+                                    property of the new concept.</p>
+                                <h5>What Are the Values that I Should Use in Each Cell of a Row?</h5>
+                                <p>Values should be literals or URIs. For example, the second column is always a URI.</p>
+                                <p>Each concept is a subconcept of something else. For instance, an instrument called <i>Mass Spectrometer</i>
+                                    is a subclass of <i>Spectrometer</i>. Thus, the value of the <strong>rdf:subClassOf</strong> column for the Mass Spectrometer
+                                    should be the URI of the spectrometer. In that way, concepts are organized into hierarchies.</p>
+                                <p>In the case of instances, each instance should have the URI of a concept. For instance, the value of the a column of a
+                                    mass spectrometer should have the URI of the concept <i>Mass Spectrometer</i>.</p>
+                                <h5>What are the Values for the Rest of the Columns in a Sheet?</h5>
+                                <p>The names are often self-explanatory. The <strong>rdfs:label</strong> is an important exception to this rule is that property
+                                    names are self-explanatory. For instance, <strong>rdfs:label</strong> is a textual description of the concept or instance
+                                    being described in the spreadsheet.</p>
+                                <h5>Can I Validate My Spreadsheet?</h5>
+                                <p>A spreadsheet validation consists of a two phases:</p>
+                                <ol>
+                                    <li>The Parsing phase identifies syntax erros during the process of filling out the spreadsheets.
+                                        The instructions for <a class="link" href="#psms">parsing static metadata spreadsheets</a> describe how to identify syntax erros and fix them.</li>
+                                    <li>The Verification phase executes a number of basic rules to assure a minimal level of quality for the metadata
+                                        captured through the use of static metadata spreadsheets. For instance, it is in the verification phase that we
+                                        check if every instance has a concept URI, and if the concept URI exists.</li>
+                                </ol>
+
+                            </div>
+                        </div>
+                        <div class="row" id="psms"> <!-- Parsing Static Metadata Spreadsheets -->
+                            <div class="col-md-8 col-md-offset-2">
+                                <h4 class="center-text">Parsing Static Metadata Spreadsheets</h4>
+                                <p>To be added at a later date.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End main -->
+        </div> <!-- End wrapper -->
 
         <footer class="footer-demo section-dark">
             <div class="container">
