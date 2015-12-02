@@ -8,7 +8,7 @@ Authors: Matt Hamlin
 
 ## Definitions:
 
-  * Framework: [Paperkit](http://www.creative-tim.com/product/paper-kit) developed by Creative Tim (company name)
+  * Framework: [Paperkit](http://www.creative-tim.com/product/paper-kit) developed by Creative Tim (company) is a set of designs, styles, and scripts to stylize basic html components. 
   * Javascript Libraries: jQuery and AngularJS
 
 ## Project Structure:
@@ -70,3 +70,21 @@ Authors: Matt Hamlin
 |install-template.html
 
 ```
+
+## Developers writeup
+
+The project was built with the paperkit framework, using Bootstrap as a base. Every page is built using the default 12 column grid offered by bootstrap.
+
+There were some customizations added to the sites to improve readability and user interface. These styles were added to the `main.css` file. The classes include:
+  * `.vert` to vertically align an element
+  * `.link` to offer an alternative link color
+  * `.link2` to offer yet another alternative link color
+  * `.above` to provide a simple above spacer using `margin-top`
+  * `.section-easter` to provide another background color for `.section`s
+  * `.out` to change the styles of example terminal output
+  * `.text-lg` to change the default size of text within elements
+  * `.white-text` to "clear" any text color formats
+  * `.center-img` to center any images on the page
+  * `special-section` to make sure any section has a min-height that isn't as large as the `.landing-section` class
+
+Every piece of text should be located within an element to keep the document properly formatted as well as to make sure any html file is semantically correct. Every html file is using the latest html5 `DCOTYPE`.
