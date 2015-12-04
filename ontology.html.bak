@@ -39,11 +39,11 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navigation-example-2">
                 <ul class="nav navbar-nav navbar-right">
-                    <a href="./about.html" class="btn btn-simple">About</a>
+                    <a href="./about.html" class="btn btn-simple"> About</a>
                     <a href="./install-guide.html" class="btn btn-simple">Installation Guide</a>
                     <a href="./feature-guide.html" class="btn btn-simple">Feature Guide</a>
-                    <a href="./example.html" class="btn btn-simple">Examples</a>
-                    <a href="./ontology.html" class="btn btn-fill btn-success">HADatAc Supporting Ontologies</a>
+                    <a href="./example.html" class="btn btn-simple">Example</a>
+                    <a href="#" class="btn btn-fill btn-success">Ontology</a>
                 </ul>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-->
@@ -101,12 +101,12 @@
 		                                 <p><a class="link" href="#Section_1">Encoding Knowledge about Sensor Networks and IndividualInstruments</a></p>
 		                             </div>
 		                          </div>
-		                          <div class="row left-text">
+		                          <div class="row">
 		                             <div class="col-md-8"align="left">
 		                                 <p><a class="link" href="#Section_1">Encoding Knowledge about Measurements</a></p>
 		                             </div>
 		                          </div>
-		                          <div class="row left-text">
+		                          <div class="row">
 		                             <div class="col-md-6" align="left">
 		                                 <p><a class="link" href="#Section_1">Encoding Knowledge about Human Interventions</a></p>
 		                             </div>

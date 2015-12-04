@@ -33,6 +33,24 @@
 .center-img {
     margin-left: 10%;
 }
+
 .special-section {
     min-height: 175px;
 }
+
+#HasnetoFig_1{
+	margin-left: 12%;
+}
+
+#HasnetoFig_2{
+	margin-left: 21%;
+}
+
+#HasnetoFig_3{
+	margin-left: 22%;
+}
+
+.left-text{
+	padding-left:240px;
+}
+
