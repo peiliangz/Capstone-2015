@@ -32,6 +32,12 @@
     padding: 0;
 }
 
+#ontology-panel .panel{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
 .white-text {
     background-color: white;
     color: black;
