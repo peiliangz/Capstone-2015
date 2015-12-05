@@ -73,206 +73,177 @@
                             <div class="col-md-8 col-md-offset-2">
                                 <h2>What is HASNetO?</h2>
                                 <p>Human-Aware Sensor Network Ontology (HASNetO) is
-																	 a comprehensive alignment and integration of well-established 
-																	 ontologies for en-coding scientic sensing infrastructures, scientic 
-																	 observations, and provenance.The integrated ontology is available at 
-																	 <a class="link" href="http://hadatac.org/ont/hasneto">HASNetO</a> HADatAc 
-																	 is good example that a comprehensive infrastructure for managing HASNetO-based knowledge bases.
+								    a comprehensive alignment and integration of well-established
+                                    ontologies for encoding scientic sensing infrastructures, scientic
+                                    observations, and provenance. The integrated ontology is available at
+                                    <a class="link" href="http://hadatac.org/ont/hasneto">HASNetO</a> HADatAc
+                                    is good example that a comprehensive infrastructure for managing HASNetO-based knowledge bases.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-								
-								<div class="section text-center landing-section section-light-brown">
-										<div class="container">
-	                        <div class="row">
-	                            <div class="col-md-8 col-md-offset-2">
-	                                <h2>How HASNetO Works?</h2>
-	                                <p>HASNetO aims to provide the concepts and vocabularies needed to encode em-pirical
-	                                	 data's metadata. It is built on top of three ontologies that were integrated and 
-	                                	 extended under the single name of HASNetO: The Extensible Observation Ontology (OBOE),
-																		 the Virtual Solar Terrestrial Observatory (VSTO), and the World Wide
-																		 Web's Provenance Ontology (PROV-O).
-	                                </p>
+				<div class="section text-center landing-section section-light-brown">
+					<div class="container">
+	                    <div class="row">
+	                        <div class="col-md-8 col-md-offset-2">
+	                            <h2>How HASNetO Works?</h2>
+	                            <p>HASNetO aims to provide the concepts and vocabularies needed to encode empirical
+	                                 data's metadata. It is built on top of three ontologies that were integrated and
+	                                 extended under the single name of HASNetO: The Extensible Observation Ontology (OBOE),
+									 the Virtual Solar Terrestrial Observatory (VSTO), and the World Wide
+									 Web's Provenance Ontology (PROV-O).
+	                            </p>
 	                        </div>
-							                <div class="row left-text">
-		                             <div class="col-md-8"align="left">
-		                                 <p><a class="link" href="#Section_1">Encoding Knowledge about Sensor Networks and IndividualInstruments</a></p>
-		                             </div>
-		                          </div>
-		                          <div class="row left-text">
-		                             <div class="col-md-8"align="left">
-		                                 <p><a class="link" href="#Section_1">Encoding Knowledge about Measurements</a></p>
-		                             </div>
-		                          </div>
-		                          <div class="row left-text">
-		                             <div class="col-md-6" align="left">
-		                                 <p><a class="link" href="#Section_1">Encoding Knowledge about Human Interventions</a></p>
-		                             </div>
-		                          </div>
-																
-					               </div>
-	                 </div>
+							<div class="row left-text">
+		                        <div class="col-md-8"align="left">
+		                            <p><a class="link" href="#Section_1">Encoding Knowledge about Sensor Networks and IndividualInstruments</a></p>
+		                        </div>
+		                    </div>
+		                    <div class="row left-text">
+		                        <div class="col-md-8"align="left">
+		                            <p><a class="link" href="#Section_1">Encoding Knowledge about Measurements</a></p>
+		                        </div>
+		                    </div>
+		                    <div class="row left-text">
+		                        <div class="col-md-6" align="left">
+		                            <p><a class="link" href="#Section_1">Encoding Knowledge about Human Interventions</a></p>
+		                        </div>
+		                    </div>
+					    </div>
+	                </div>
                </div>
-				            
-            		</div>
-                <div class=" section section-gray landing-section" id="Section_1"> 
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-3">
-                                <h6 class="center-text">Fig. 1. HASNetO concepts describing measurement infrastructure</h6>
-                            </div>
-                            <img src="./assets/HasnetO-fig-1.png" id="HasnetoFig_1">
-                     
-                        </div>
-
-                            <div class="col-md-8 col-md-offset-2">
-                                <h5>Definitions</h5>
-                                <h6><u>vstoi:Platform:</u></h6>
-                                <p>
-                                    An object that keeps the instrument in a specic location to
-																		ensure that it is recording data about the selected location. A platform may
-																		also provide overhead services, such as providing power to the instrument
-																		and a data connection. Sometimes a platform is mobile like a plane or a
-																		person, or stationary like a tower of a weather station.
-                                 </p>
-                                <h6><u>vstoi:Instrument:</u></h6>
-                                 <p>
-                                     An object that receives sensed signals from detectors and
-																		 processes these signals into numerical values. For example, consider a tipping
-                                     bucket rain gauge. Inside the tipping bucket rain gauge is a magnet-based
-													           detector that detects when the bucket tips. However, in order for this signal
-																		 to be meaningful, the detector needs a bucket with a known diameter, a
-																		 funnel to direct water into the bucket, etc. Together, these make up the
-																		 instrument.
-                                </p>
-                                <h6><u>vstoi:Detector:</u></h6>
-                                <p>
-                                     An object that it is capable of sensing environmental prop-
-																		 erties by collecting physical signals about these properties, translating these
-																		 physical signals into (most often electrical) signals, and forwarding these
-																		 electrical signals to instruments. Transducer is another name for detector.
-																	   Detector metadata are collected because detectors may be interchangeable,
-																		 that is they can be removed from one instrument and plugged into another.
-                                </p>
-                                <h6><u>vstoi:Deployment:</u></h6>
-                                <p>
-                                     An activity of physically deploying an instrument and
-																		its attached detectors to a platform. This activity indicates that a single
-																		instrument is ready to start collecting data.
-                                </p>
-                                <h6><u>oboe:Entity:</u></h6>
-                                <p>
-                                     Denotes a concrete or conceptual object that has been observed
-																		 (e.g., a tree, a community, an ecological process).
-                                </p>
-                                <h6><u>oboe:Characteristic:</u></h6>
-                                <p>
-                                     Represents a property of an entity that can be measured
-																		 (e.g., height, length, or color).
-                                </p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class=" section section-blue landing-section" id="Section_2"> 
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-3">
-                                <h6 class="center-text">Fig. 2. HASNetO concepts describing scientic measurements</h6>
-                            </div>
-                            <img src="./assets/HasnetO-fig-2.png" id="HasnetoFig_2">
-                     
-                        </div>
-                        
-                            <div class="col-md-8 col-md-offset-2">
-                                <h5>Definitions</h5>
-                                <h6><u>oboe:Measurement:</u></h6>
-                                <p>
-                                    An assertion that a characteristic of an entity was mea-
-																		sured and/or recorded. A measurement is also composed of a value, a mea-
-																		surement standard, and a precision (associated with the measured value).
-																		Measurements also encapsulate characteristics that were recorded, but that
-																		were not necessarily measured in a physical sense. For example, the name of
-																	a location and a taxon can be captured through measurements.
-                                 </p>
-                                <h6><u>oboe:Standard:</u></h6>
-                                 <p>
-                                     Defines a reference for comparing or naming entities via a measurement. A standard can be 
-                                     defined intentionally (e.g., as in the case of units) or extensionally (by listing the values 
-                                     of the standard, e.g., for color this might be red, blue, yellow, etc).
-                                </p>
-                                <h6><u>hasneto:DataCollection:</u></h6>
-                                <p>
-                                     Defines the technical activity of the collection of data
-																		 that is empirically observed. So far, the state of the art of semantics for
-																		 observations and measurements characterizes this activity as an Observation.
-																		 The HASNetO ontologies take the position that the concept of Observation
-																		 is a scientic activity while most if not all existing ontologies embody the
-																		 position that describe the technical activity of data collection.
-                                </p>
-                                <h6><u>oboe:Observation:</u></h6>
-                                <p>
-                                     Represents an `observed entity' that is, an entity that was
-																		 observed by an observer. An observation often consists of measurements that
-																		 refer to one or more measured characteristics of the observed entity.
-                                </p>   
-                            </div>
+               <div class=" section section-gray landing-section" id="Section_1">
+                   <div class="container">
+                       <div class="row">
+                           <div class="col-md-8 col-md-offset-3">
+                               <h6 class="center-text">Fig. 1. HASNetO concepts describing measurement infrastructure</h6>
+                           </div>
+                           <img src="./assets/HasnetO-fig-1.png" id="HasnetoFig_1">
+                       </div>
+                       <div class="col-md-8 col-md-offset-2">
+                           <h5>Definitions</h5>
+                           <h6><u>vstoi:Platform:</u></h6>
+                           <p> An object that keeps the instrument in a specic location to
+                               ensure that it is recording data about the selected location. A platform may
+                               also provide overhead services, such as providing power to the instrument
+                               and a data connection. Sometimes a platform is mobile like a plane or a
+                               person, or stationary like a tower of a weather station.
+                           </p>
+                           <h6><u>vstoi:Instrument:</u></h6>
+                           <p> An object that receives sensed signals from detectors and
+                               processes these signals into numerical values. For example, consider a tipping
+                               bucket rain gauge. Inside the tipping bucket rain gauge is a magnet-based
+                               detector that detects when the bucket tips. However, in order for this signal
+                               to be meaningful, the detector needs a bucket with a known diameter, a
+                               funnel to direct water into the bucket, etc. Together, these make up the instrument.
+                           </p>
+                           <h6><u>vstoi:Detector:</u></h6>
+                           <p> An object that it is capable of sensing environmental properties
+                               by collecting physical signals about these properties, translating these
+                               physical signals into (most often electrical) signals, and forwarding these
+                               electrical signals to instruments. Transducer is another name for detector.
+                               Detector metadata are collected because detectors may be interchangeable,
+                               that is they can be removed from one instrument and plugged into another.
+                           </p>
+                           <h6><u>vstoi:Deployment:</u></h6>
+                           <p> An activity of physically deploying an instrument and
+                               its attached detectors to a platform. This activity indicates that a single
+                               instrument is ready to start collecting data.
+                           </p>
+                           <h6><u>oboe:Entity:</u></h6>
+                           <p> Denotes a concrete or conceptual object that has been observed (e.g., a tree, a community, an ecological process).
+                           </p>
+                           <h6><u>oboe:Characteristic:</u></h6>
+                           <p> Represents a property of an entity that can be measured (e.g., height, length, or color).</p>
+                       </div>
+                   </div>
+               </div>
+               <div class=" section section-blue landing-section" id="Section_2">
+                   <div class="container">
+                       <div class="row">
+                           <div class="col-md-8 col-md-offset-3">
+                               <h6 class="center-text">Fig. 2. HASNetO concepts describing scientic measurements</h6>
+                           </div>
+                           <img src="./assets/HasnetO-fig-2.png" id="HasnetoFig_2">
+                       </div>
+                       <div class="col-md-8 col-md-offset-2">
+                           <h5>Definitions</h5>
+                           <h6><u>oboe:Measurement:</u></h6>
+                           <p>An assertion that a characteristic of an entity was measured
+                                and/or recorded. A measurement is also composed of a value, a
+                                measurement standard, and a precision (associated with the measured value).
+                                Measurements also encapsulate characteristics that were recorded, but that
+                                were not necessarily measured in a physical sense. For example, the name of
+                                a location and a taxon can be captured through measurements.
+                            </p>
+                            <h6><u>oboe:Standard:</u></h6>
+                            <p>Defines a reference for comparing or naming entities via a measurement. A standard can be
+                                defined intentionally (e.g., as in the case of units) or extensionally (by listing the values
+                                of the standard, e.g., for color this might be red, blue, yellow, etc).
+                            </p>
+                            <h6><u>hasneto:DataCollection:</u></h6>
+                            <p>Defines the technical activity of the collection of data
+                                that is empirically observed. So far, the state of the art of semantics for
+                                observations and measurements characterizes this activity as an Observation.
+                                The HASNetO ontologies take the position that the concept of Observation
+                                is a scientic activity while most if not all existing ontologies embody the
+                                position that describe the technical activity of data collection.
+                            </p>
+                            <h6><u>oboe:Observation:</u></h6>
+                            <p>Represents an `observed entity' that is, an entity that was
+                                observed by an observer. An observation often consists of measurements that
+                                refer to one or more measured characteristics of the observed entity.
+                            </p>
                         </div>
                     </div>
-
-                    <div class=" section section-easter landing-section" id="Section_3"> 
+                </div>
+                <div class=" section section-easter landing-section" id="Section_3">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3">
                                 <h6 class="center-text">Fig. 3. HASNetO concepts describing the provenance of technical activities in support
-																of empirical data collections</h6>
+                                    of empirical data collections
+                                </h6>
                             </div>
                             <img src="./assets/HasnetO-fig-3.png" id="HasnetoFig_3">
-                     
                         </div>
-
-                            <div class="col-md-8 col-md-offset-2">
-                                <h5>Definitions</h5>
-                                <h6><u>prov:Activity:</u></h6>
-                                <p>
-                                    How PROV entities come into existence and how their at-
-																	  tributes change to become new entities, often making use of previously ex-
-																		isting entities to achieve this.
-                                 </p>
-                                <h6><u>prov:Agent:</u></h6>
-                                 <p>
-                                     Takes a role in an activity such that the agent can be assigned
-																		 some degree of responsibility for the activity taking place. An agent can
-																		 be a person, a piece of software, an inanimate object, an organization, or
-																		 other entities that may be ascribed responsibility. When an agent has some
-																		 responsibility for an activity, PROV says the agent was associated with the
-																			activity, where several agents may be associated with an activity and vice-
-																			versa." In HASNetO terms, we see that some prov:Activity instances in
-																			support of data collection are mainly performed by humans while others are
-																			mainly performed by machines. However, it can be challenging and in fact
-																			unnecessary to classify these activities as long we can fully describe the exact
-																			involvement of each agent in each activity, including the fact that the agent
-																			is a human or a machine.
-                                </p>
-                                <h6><u>prov:Entity:</u></h6>
-                                <p>
-                                     Defined as \physical, digital, conceptual, or other kinds of
-																		thing." In HASNetO, prov:Entity is used to represent, for instance, samples
-																		that have been collected and that are going to be further analyzed in a
-																		lab, that is where scientic measurements and data collections occur. Also,
-																		prov:Entity is used to specify any information that is fed into an platform,
-																		instrument or detector that change the behavior of any of these measuring
-																		devices. Finally, while an instance of prov:Entity may be an instance of
-																		oboe:Entity and vice-versa, we prefer to treat them separate considering
-																		their distinct roles in scientic activities.
-                                </p> 
-                            </div>
+                        <div class="col-md-8 col-md-offset-2">
+                            <h5>Definitions</h5>
+                            <h6><u>prov:Activity:</u></h6>
+                            <p>How PROV entities come into existence and how their
+                                attributes change to become new entities, often making use of previously
+                                existing entities to achieve this.
+                            </p>
+                            <h6><u>prov:Agent:</u></h6>
+                            <p>Takes a role in an activity such that the agent can be assigned
+                                some degree of responsibility for the activity taking place. An agent can
+                                be a person, a piece of software, an inanimate object, an organization, or
+                                other entities that may be ascribed responsibility. When an agent has some
+                                responsibility for an activity, PROV says the agent was associated with the
+                                activity, where several agents may be associated with an activity and vice-versa."
+                                 In HASNetO terms, we see that some prov:Activity instances in
+                                 support of data collection are mainly performed by humans while others are
+                                 mainly performed by machines. However, it can be challenging and in fact
+                                 unnecessary to classify these activities as long we can fully describe the exact
+                                 involvement of each agent in each activity, including the fact that the agent
+                                 is a human or a machine.
+                            </p>
+                            <h6><u>prov:Entity:</u></h6>
+                            <p>Defined as \physical, digital, conceptual, or other kinds of
+                                thing." In HASNetO, prov:Entity is used to represent, for instance, samples
+                                that have been collected and that are going to be further analyzed in a
+                                lab, that is where scientic measurements and data collections occur. Also,
+                                prov:Entity is used to specify any information that is fed into an platform,
+                                instrument or detector that change the behavior of any of these measuring
+                                devices. Finally, while an instance of prov:Entity may be an instance of
+                                oboe:Entity and vice-versa, we prefer to treat them separate considering
+                                their distinct roles in scientic activities.
+                            </p>
                         </div>
                     </div>
-  
+                </div>
+
             </div> <!-- End main -->
         </div> <!-- End wrapper -->
 
