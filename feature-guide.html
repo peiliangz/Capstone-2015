@@ -510,7 +510,36 @@
                         <div class="row" id="psms"> <!-- Parsing Static Metadata Spreadsheets -->
                             <div class="col-md-8 col-md-offset-2">
                                 <h4 class="center-text">Parsing Static Metadata Spreadsheets</h4>
-                                <p>To be added at a later date.</p>
+                                <p>To parse data from a csv do the following:</p>
+                                <ul>
+                                    <li>From HADatAc portal page select “Metadata Browser” from black top menu bar to navigate to the Metadata Browser page.</li>
+                                    <li>Choose “Create CCSV from CSV” from the “Data Upload” Menu.</li>
+                                    <ul>
+                                        <li>Note: A CCSV is a contextualized common separated value.  This command takes a spreadsheet saved in CSV format and converts it to CCSV. </li>
+                                    </ul>
+                                    <li>The CSV Annotator opens</li>
+                                    <li>Step 1: Select Current Deployments. Choose from deployment that you want to add the csv data to. Deployments will have a Platform, instrument, a start time and operation.</li>
+                                    <li>Step 2:  (tbd)</li>
+                                    <li>Step 3: (tbd)</li>
+                                    <li>From the “Metadata Browser choose “Upload CCSV” from the Data Upload Menu. </li>
+                                    <li>Select “Choose File”</li>
+                                    <li>Navigate to your CCSV file you want to upload and select “open”</li>
+                                    <li>A message appears asking “Are you sure you want to load and index this file into the measurements repository?” Select “Confirm”.</li>
+                                </ul>
+                                <h5>What Happens When Everything is Right?</h5>
+                                <ul>
+                                    <li>If it is successfully loaded you will receive a message that the file has been loaded with date and time the file was loaded.</li>
+                                    <li>Select “ok”</li>
+                                </ul>
+                                <h5>How Do I know If Something Is Wrong and where is the Error?</h5>
+                                <p>When you upload the CCSV if you receive errors the problem is most likely with the data in the csv. See the "How to Fix it?" section below. </p>
+                                <h5>How to Fix It?</h5>
+                                <p>Make sure to check the following in your csv spreadsheet:</p>
+                                <ul>
+                                    <li>For everything that has a URI (“hasURI”) i.e. platforms, instrument models, instruments, detector models, detectors, sensing perspective, entities, characteristics, agents, make sure that it has indicated the correct URI linking it to its parent URI.</li>
+                                    <li>The collection of measurements under the metadata ‘characteristics’ should identify the ontology it is a sub-class of (“rdfs:subClassOf”), this name should be one word and should not have any spaces.</li>
+                                    <li>Agents: the identification of Agents in the spreadsheet should show the first and last name of a person. Make sure the assigned URI (“hasURI”) for each person or organization shows the name (first and last) without any spaces. Check hyphenated names in the assigned URI name as this can also cause errors. You may remove the hyphenation to solve this.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
