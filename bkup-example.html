@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en" ng-app="aboutApp">
+    <head>
+    	<meta charset="utf-8" />
+    	<link rel="icon" type="image/png" href="./paperkit/assets/paper_img/favicon.ico">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    	<title>HADatAc Examples</title>
+
+    	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+        <meta name="viewport" content="width=device-width" />
+
+        <link href="./paperkit/bootstrap3/css/bootstrap.css" rel="stylesheet" />
+        <link href="./paperkit/assets/css/ct-paper.css" rel="stylesheet"/>
+        <link href="./paperkit/assets/css/demo.css" rel="stylesheet" />
+        <link href="./paperkit/assets/css/examples.css" rel="stylesheet" />
+        <link href="./css/main.css" rel="stylesheet" />
+
+        <!--     Fonts and icons     -->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+    </head>
+    <body ng-controller="aboutControl">
+        <nav class="navbar navbar-default" role="navigation-demo" id="demo-navbar">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">Home</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navigation-example-2">
+                <ul class="nav navbar-nav navbar-right">
+                    <a href="./about.html" class="btn btn-simple"> About</a>
+                    <a href="./install-guide.html" class="btn btn-simple">Installation Guide</a>
+                    <a href="./feature-guide.html" class="btn btn-simple">Feature Guide</a>
+                    <a href="#" class="btn btn-fill btn-success">Examples</a>
+                    <a href="./ontology.html" class="btn btn-simple">HADatAc Supporting Ontologies</a>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-->
+        </nav>
+        <div class="wrapper">
+            <div class="landing-header section-gray">
+                <div class="container">
+                    <div class="motto">
+
+                      <!--Main Section -->
+                        <h1 class="title-uppercase">Examples utilize HADatAc Framework</h1>
+                        <!--
+                        <h3>* Jefferson Project</h3>
+                        <h3>* CASE Data Repository</h3>
+                        <h3>* Cidade de Fortaleza’s Smart City Project</h3>
+                        <h3>* NIH CHEAR</h3>
+                        --> 
+
+                        <div class="example-button">
+                            <button type="button" class="btn-lg btn-success btn-fill" href="#jefferson" data-toggle="collapse" data-parent="#example-panel" aria-expanded="true" aria-controls="jefferson">Jefferson Project</button>
+                        </div>
+                        
+                        <div class="example-button">
+                            <button type="button" class="btn-lg btn-success btn-fill" href="#case" data-toggle="collapse" data-parent="#example-panel" aria-expanded="false" aria-controls="case">CASE Data Repository</button>
+                        </div>
+
+                        <div class="example-button">
+                            <button type="button" class="btn-lg btn-success btn-fill" href="#cidade" data-toggle="collapse" data-parent="#example-panel" aria-expanded="false" aria-controls="cidade">Cidade de Fortaleza’s Smart City Project</button>
+                        </div>
+
+                        <div class="example-button">
+                            <button type="button" class="btn-lg btn-success btn-fill" href="#nih" data-toggle="collapse" data-parent="#example-panel" aria-expanded="false" aria-controls="nih">NIH CHEAR</button>
+                        </div>
+
+                        <br />
+                    </div>
+                </div>
+            </div>
+            <div id="example-panel" class="main">
+
+                <div id="jefferson" class="collapse">
+                    <div class="section section text-center landing-section section-brown">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <h2>Jefferson Project</h2>
+                                    <a href="http://fundforlakegeorge.org/JeffersonProject" class="btn btn-simple"> Project Link</a>
+                                    </br>
+                                    <a href="http://Jefferson.tw.rpi.edu/hadatac/" class="btn btn-simple"> HADatAc Link </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="case" class="collapse">
+                    <div class="section section text-center landing-section section-light-brown">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <h2>CASE Data Repository</h2>
+                                      <a href="http://case.rpi.edu" class="btn btn-simple"> Project Link</a>
+                                      </br>
+                                      <a href="http://case.tw.rpi.edu/hadatac/"> HADatAc Link</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="cidade" class="collapse">
+                    <div class="section section text-center landing-section section-nude">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <h2>Cidade de Fortaleza’s Smart City Project</h2>
+                                    <a href="http://fortalezainteligente.fortaleza.ce.gov.br" class="btn btn-simple"> Project Link</a>
+                                    </br>
+                                    <!--to be announced later...-->
+                                    <a href="" class="btn btn-simple"> HADatAc Link  </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="nih" class="collapse">
+                    <div class="section section text-center landing-section section-gray">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <h2>NIH CHEAR</h2>
+                                    <a href="o  http://www.niehs.nih.gov/research/supported/dert/programs/chear/" class="btn btn-simple"> Project Link</a>
+                                    </p>
+                                    <p> <i>HADatAc Link </i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section landing-section ">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <h4 class="text-success">Follow through to learn how to install HADatAc: </h4>
+                            </div>
+                            <div class="col-md-3">
+                                <a class="btn btn-lg btn-fill btn-success above" href="./install-guide.html">&#10140;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End main -->
+        </div> <!-- End wrapper -->
+
+        <footer class="footer-demo section-dark">
+            <div class="container">
+                <nav class="pull-left" class="vert">
+                    <ul class="vert">
+                        <li>
+                            <a href="http://github.com/paulopinheiro1234/hadatac">
+                                HADatAc Github Repository
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="copyright pull-right">
+                    &copy; 2015, made with <i class="fa fa-headphones heart"></i> by Group Four
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="./paperkit/assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+        <script src="./paperkit/assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+
+        <script src="./paperkit/bootstrap3/js/bootstrap.js" type="text/javascript"></script>
+
+
+        <!--  Plugins -->
+        <script src="./paperkit/assets/js/ct-paper-checkbox.js"></script>
+        <script src="./paperkit/assets/js/ct-paper-radio.js"></script>
+        <script src="./paperkit/assets/js/bootstrap-select.js"></script>
+        <script src="./paperkit/assets/js/bootstrap-datepicker.js"></script>
+        <script src="./paperkit/assets/js/ct-paper.js"></script>
+
+        <script src="./node_modules/angular/angular.min.js"></script>
+        <script src="./js/aboutController.js"></script>
+    </body>
+</html>
