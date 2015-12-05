@@ -26,6 +26,12 @@
     padding: 0;
 }
 
+#example-panel .panel{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
 .white-text {
     background-color: white;
     color: black;
