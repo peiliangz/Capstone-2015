@@ -1,6 +1,6 @@
 ----
 HADatAc Information Website Documentation  
-Date: December 2nd, 2015  
+Date: December 5th, 2015  
 Authors: Matt Hamlin  
 ----
 
@@ -68,6 +68,8 @@ Authors: Matt Hamlin
 |index.html
 |install-guide.html
 |install-template.html
+|ontology.html
+|example.html
 
 ```
 
@@ -86,5 +88,8 @@ There were some customizations added to the sites to improve readability and use
   * `.white-text` to "clear" any text color formats
   * `.center-img` to center any images on the page
   * `special-section` to make sure any section has a min-height that isn't as large as the `.landing-section` class
+  * `.large-section` to make sure any section has a min-height that is larger than `.landing-section`
+  * `.left-text` a helper class to push text to the right a bit
+  * `.example-button` a helper class to space buttons out properly
 
-Every piece of text should be located within an element to keep the document properly formatted as well as to make sure any html file is semantically correct. Every html file is using the latest html5 `DCOTYPE`.
+Every piece of text should be located within an element to keep the document properly formatted as well as to make sure any html file is semantically correct. Every html file is using the latest html5 `DOCTYPE`.
