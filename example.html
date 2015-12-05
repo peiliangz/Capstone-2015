@@ -54,85 +54,96 @@
                     <div class="motto">
 
                       <!--Main Section -->
-                        <h1 class="title-uppercase">Examples utilize HADatAc Framework</h1>
-                        <h3>* Jefferson Project</h3>
-                        <h3>* CASE Data Repository</h3>
-                        <h3>* Cidade de Fortaleza’s Smart City Project</h3>
-                        <h3>* NIH CHEAR</h3>
+                        <h1 class="title-uppercase">Examples of Utilizing HADatAc Framework</h1>
 
-                      
+                        <div class="example-button">
+                            <button type="button" class="btn-lg btn-success btn-fill" href="#jefferson" data-toggle="collapse" data-parent="#example-panel" aria-expanded="true" aria-controls="jefferson">Jefferson Project</button>
+                        </div>
+                        
+                        <div class="example-button">
+                            <button type="button" class="btn-lg btn-success btn-fill" href="#case" data-toggle="collapse" data-parent="#example-panel" aria-expanded="false" aria-controls="case">CASE Data Repository</button>
+                        </div>
+
+                        <div class="example-button">
+                            <button type="button" class="btn-lg btn-success btn-fill" href="#cidade" data-toggle="collapse" data-parent="#example-panel" aria-expanded="false" aria-controls="cidade">Cidade de Fortaleza’s Smart City Project</button>
+                        </div>
+
+                        <div class="example-button">
+                            <button type="button" class="btn-lg btn-success btn-fill" href="#nih" data-toggle="collapse" data-parent="#example-panel" aria-expanded="false" aria-controls="nih">NIH CHEAR</button>
+                        </div>
 
                         <br />
                     </div>
                 </div>
             </div>
-            <div class="main">
-                <div id="what-is" class="section text-center landing-section section-brown">
-                    <div class="container">
-                        <div class="row">
-                          <!--first section-->
-                            <div class="col-md-8 col-md-offset-2">
-                                <h2>Jefferson Project</h2>
-                                <a href="http://fundforlakegeorge.org/JeffersonProject" class="btn btn-simple"> Project Link</a>
-                                </br>
-                                <a href="http://Jefferson.tw.rpi.edu/hadatac/" class="btn btn-simple"> HADatAc Link </a>
-
+            <div id="example-panel" >
+                <div class="panel">
+                    <div id="jefferson" class="collapse" >
+                        <div class="section text-center landing-section section-brown" >
+                            <div class="container ">
+                                <div class="row">
+                                  <!--first section-->
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <h2>Jefferson Project</h2>
+                                        <a href="http://fundforlakegeorge.org/JeffersonProject" class="btn btn-simple"> Project Link</a>
+                                        </br>
+                                        <a href="http://Jefferson.tw.rpi.edu/hadatac/" class="btn btn-simple"> HADatAc Link </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-                <div id="how-useful" class="section text-center section-light-brown landing-section">
-                    <div class="container">
-                        <div class="row">
-                          <!--second section-->
-                            <div class="col-md-8 col-md-offset-2">
-                                <h2>CASE Data Repository</h2>
-                                  <a href="http://case.rpi.edu" class="btn btn-simple"> Project Link</a>
-                                  </br>
-                                  <a href="http://case.tw.rpi.edu/hadatac/"> HADatAc Link</a>
-                                </p>
+                <div class="panel">
+                    <div id="case" class="collapse">
+                        <div class="section text-center section-light-brown landing-section">
+                            <div class="container">
+                                <div class="row">
+                                  <!--second section-->
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <h2>CASE Data Repository</h2>
+                                          <a href="http://case.rpi.edu" class="btn btn-simple"> Project Link</a>
+                                          </br>
+                                          <a href="http://case.tw.rpi.edu/hadatac/"> HADatAc Link</a>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="section section-nude text-center landing-section">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-2">
-                                <h2>Cidade de Fortaleza’s Smart City Project</h2>
-                                <a href="http://fortalezainteligente.fortaleza.ce.gov.br" class="btn btn-simple"> Project Link</a>
-                                </br>
-                                <!--to be announced later...-->
-                                <a href="" class="btn btn-simple"> HADatAc Link  </a>
+                <div class="panel">
+                    <div id="cidade" class="collapse">
+                        <div class="section section-nude text-center landing-section">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <h2>Cidade de Fortaleza’s Smart City Project</h2>
+                                        <a href="http://fortalezainteligente.fortaleza.ce.gov.br" class="btn btn-simple"> Project Link</a>
+                                        </br>
+                                        <!--to be announced later...-->
+                                        <a href="" class="btn btn-simple"> HADatAc Link  </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="section section-gray text-center landing-section">
-                    <div class="container">
-                      <div class="col-md-8 col-md-offset-2">
-                          <h2>NIH CHEAR</h2>
-                          <a href="o	http://www.niehs.nih.gov/research/supported/dert/programs/chear/" class="btn btn-simple"> Project Link</a>
-                          </p>
-                          <p> <i>HADatAc Link </i>
-                          </p>
-                      </div>
-
-                        <!--
-                        <div class = "row" >
-                            <div class={{$index == 0? "col-md-2 col-md-offset-1" : "col-md-2" }}  ng-repeat="developer in developers">
-                                <h4><a href="https://github.com/MrGraph">{{developer.login}}</a></h4>
-                                <img alt={{developer.login + " Picture"}} src={{developer.avatar_url}} class="img-circle img-no-padding img-responsive"/>
+                <div class="panel">
+                    <div id="nih" class="collapse">
+                        <div class="section section-gray text-center landing-section">
+                            <div class="container">
+                              <div class="col-md-8 col-md-offset-2">
+                                  <h2>NIH CHEAR</h2>
+                                  <a href="o	http://www.niehs.nih.gov/research/supported/dert/programs/chear/" class="btn btn-simple"> Project Link</a>
+                                  </p>
+                                  <p> <i>HADatAc Link </i>
+                                  </p>
+                              </div>
                             </div>
                         </div>
-
-                        -->
-
-
                     </div>
-                </div>
+                </div>  
                 <div class="section landing-section ">
                     <div class="container">
                         <div class="row">
