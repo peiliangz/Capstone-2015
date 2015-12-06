@@ -145,7 +145,7 @@
                                     The Metadata Browser allows you to examine the parts of your data collection that give it context, including the entities observed,
                                      the characteristics being measured, and the sensors taking the measurements.
                                      Metadata is kept as linked data in order to preserve the relationships between it and the data, and leverages ontologies already
-                                     in use by other scentific communities to aid interoperability. Ontologies also provide a hierarchical structure of concepts, which
+                                     in use by other scientific communities to aid interoperability. Ontologies also provide a hierarchical structure of concepts, which
                                       can help lend insight into the organization of the sensor network collecting the data.
                                  </p>
                                  <p>
@@ -158,7 +158,7 @@
                                      by the HASNetO and VSTOI ontologies. Sensor models are considered classes - that is, they are general concepts rather than
                                      physical objects. The default "tree view" on these pages displays this hierarchy as an interactive tree, with broader
                                      concepts on the left side, branching out into more specific ones towards the right. Click nodes to expand or contract subtrees
-                                     (all are expanded by default), or mouse over a node for additional information.
+                                     (all are expanded by default), or mouseover a node for additional information.
                                  </p>
                                  <p>
                                      The "table view" contains the same information as a flat table. Click the name of the model to expand its block entry in
@@ -425,14 +425,14 @@
                                 <h5>How Do I Build a Static Metadata Spreadsheet?</h5>
                                 <p>Static Metadata Spreadsheets are expected to be developed from spreadsheet templates. In a template we have the following:</p>
                                 <ul>
-                                    <li>one of more sheets</li>
+                                    <li>one or more sheets</li>
                                     <li>each sheet has a name (a simple string)</li>
                                     <li>each sheet has just one title row, and nothing else</li>
                                     <li>the title row is composed of two or more columns, each column containing a label</li>
                                 </ul>
                                 <p>Once you go through the process of reading the template of a static metadata spreadsheet, you may start the process of describing
                                     your static metadata by filling out static metadata spreadsheets, one row a time.</p>
-                                <p>These are some of the rules that you most follow:</p>
+                                <p>These are some of the rules that you must follow:</p>
                                 <ol>
                                     <li>Do not add or remove columns</li>
                                     <li>It is okay to group create a spreadsheet that is about a single concept or instance. It is also okay to build a single spreadsheet for all concepts</li>
@@ -479,7 +479,7 @@
                                 <h5>How Can I See the Hierarchies of Core HADatAc Concepts?</h5>
                                 <p>To be implemented at a later date.</p>
                                 <h5>How Can I Add A New Concept Under an Existing Subconcept?</h5>
-                                <p>When browsing an hierarchy, you can inspect the concepts inside the hierarchy but hovering the mouse over the concepts.
+                                <p>When browsing an hierarchy, you can inspect the concepts inside the hierarchy but hovering the mouseover the concepts.
                                     The info box on the right side of the browser would show you the details of the concept currently selected.
                                     One of the properties shown in the info box is the URI of the concept. If this is the concept that is going to be the
                                     parent of a new concept to be included, this is the URI that should be added to the <strong>rdfs:subClassOf</strong>
@@ -498,8 +498,8 @@
                                 <h5>Can I Validate My Spreadsheet?</h5>
                                 <p>A spreadsheet validation consists of a two phases:</p>
                                 <ol>
-                                    <li>The Parsing phase identifies syntax erros during the process of filling out the spreadsheets.
-                                        The instructions for <a class="link" href="#psms">parsing static metadata spreadsheets</a> describe how to identify syntax erros and fix them.</li>
+                                    <li>The Parsing phase identifies syntax errors during the process of filling out the spreadsheets.
+                                        The instructions for <a class="link" href="#psms">parsing static metadata spreadsheets</a> describe how to identify syntax errors and fix them.</li>
                                     <li>The Verification phase executes a number of basic rules to assure a minimal level of quality for the metadata
                                         captured through the use of static metadata spreadsheets. For instance, it is in the verification phase that we
                                         check if every instance has a concept URI, and if the concept URI exists.</li>
