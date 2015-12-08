@@ -1,10 +1,14 @@
 ----
 HADatAc Information Website Documentation  
-Date: December 5th, 2015  
+Date: December 8th, 2015  
 Authors: Matt Hamlin  
 ----
 
 # HADatAc Information Website Documentation
+
+Note:
+For more information on the handoff process refer to `handoffnotes.md`.
+
 
 ## Definitions:
 
