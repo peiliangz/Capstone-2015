@@ -1,7 +1,7 @@
 ---
-Handoff Notes HADatAc Information Website
-Last edited: 8th December 2015
-Edited by: Matt Hamlin
+Handoff Notes HADatAc Information Website  
+Last edited: 8th December 2015  
+Edited by: Matt Hamlin  
 ---
 
 # Handoff Notes:
